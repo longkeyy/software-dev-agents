@@ -11,27 +11,51 @@ Claude Code Agents 是一个精心设计的智能体定义库，提供了覆盖�
 ```
 claude-code-agents/
 ├── departments/              # 按部门组织的智能体
-│   ├── product/             # 产品部
+│   ├── product/             # 产品部门
 │   │   ├── business-analyst.md
 │   │   ├── product-manager.md
-│   │   ├── product-owner.md
-│   │   └── ux-designer.md
-│   ├── engineering/         # 工程技术部
-│   │   ├── architecture/   # 架构组
-│   │   ├── backend/        # 后端组
-│   │   ├── frontend/       # 前端组
+│   │   └── product-owner.md
+│   ├── creative/            # 创意部门
+│   │   ├── design/         # 设计团队
+│   │   │   ├── ux-designer.md
+│   │   │   ├── user-researcher.md
+│   │   │   ├── interaction-designer.md
+│   │   │   └── visual-designer.md
+│   │   └── content/        # 内容团队
+│   │       ├── content-writer.md
+│   │       └── narrative-designer.md
+│   ├── engineering/         # 技术部门
+│   │   ├── architecture/   # 架构团队
+│   │   ├── backend/        # 后端团队
+│   │   ├── frontend/       # 前端团队
 │   │   │   ├── web/       # Web前端
 │   │   │   └── mobile/    # 移动端
-│   │   ├── data/          # 数据组
-│   │   ├── algorithm/     # 算法组
-│   │   └── qa/            # 测试组
-│   ├── infrastructure/     # 基础设施部
-│   ├── operations/        # 运营部
-│   └── security/          # 安全部
-└── workflows/              # 工作流程指南
-    ├── analysis-design-guide.md
-    ├── development-guide.md
-    └── operations-guide.md
+│   │   ├── data/          # 数据团队
+│   │   ├── algorithm/     # 算法团队
+│   │   ├── qa/            # 测试团队
+│   │   ├── infrastructure/ # 基础设施团队
+│   │   ├── security/      # 安全团队
+│   │   └── operations/    # 技术运营团队
+│   ├── marketing/          # 营销部门
+│   │   ├── brand-marketing-expert.md
+│   │   ├── digital-marketing-expert.md
+│   │   ├── social-media-expert.md
+│   │   └── growth-marketing-expert.md
+│   ├── sales/              # 销售部门
+│   │   ├── sales-expert.md
+│   │   ├── enterprise-sales-expert.md
+│   │   └── presales-engineer.md
+│   └── customer-service/   # 客户服务部门
+│       ├── customer-support-expert.md
+│       ├── technical-support-expert.md
+│       └── customer-success-expert.md
+└── workflows/              # VP级别协调者
+    ├── vp-technology.md     # 技术VP
+    ├── vp-product.md        # 产品VP
+    ├── vp-creative.md       # 创意VP
+    ├── vp-marketing.md      # 营销VP
+    ├── vp-sales.md          # 销售VP
+    └── vp-customer.md       # 客户VP
 ```
 
 ## 🚀 快速开始
@@ -63,81 +87,164 @@ claude --agents "product-manager,golang-expert,react-expert" "设计一个新的
 
 ## 👥 智能体分类
 
-### 产品团队
+### 🎯 VP级别协调者 (workflows/)
+- 🏗️ **vp-technology** - 技术VP（统筹技术部门）
+- 📱 **vp-product** - 产品VP（统筹产品策略和管理）
+- 🎨 **vp-creative** - 创意VP（统筹设计和内容创作）
+- 🎯 **vp-marketing** - 营销VP（统筹品牌和数字营销）
+- 💼 **vp-sales** - 销售VP（统筹销售+售前）
+- 🎧 **vp-customer** - 客户VP（统筹客户成功+技术支持）
+
+### 📦 产品部门 (product/)
 - 🔍 **business-analyst** - 业务分析师
 - 📱 **product-manager** - 产品经理
-- 🎯 **product-owner** - 产品负责人（Scrum）
-- 🎨 **ux-designer** - UX设计师
+- 🎯 **product-owner** - 产品负责人
 
-### 后端开发
+### 🎨 创意部门 (creative/)
+
+#### 🎨 设计团队 (creative/design/)
+- 🎨 **ux-designer** - 用户体验设计师
+- 🔬 **user-researcher** - 用户研究专家
+- 🖱️ **interaction-designer** - 交互设计师
+- 🎭 **visual-designer** - 视觉设计师
+
+#### 📝 内容团队 (creative/content/)
+- ✍️ **content-writer** - 内容创作专家
+- 📖 **narrative-designer** - 叙事设计师
+
+### 💻 技术部门 (engineering/)
+
+#### 🏗️ 架构团队 (engineering/architecture/)
+- 🏗️ **system-architect** - 系统架构师
+- 💾 **data-architect** - 数据架构师
+- 🔒 **security-architect** - 安全架构师
+
+#### 🖥️ 后端团队 (engineering/backend/)
 - ☕ **java-expert** - Java开发专家
 - 🐹 **golang-expert** - Go开发专家
 - 🐍 **python-expert** - Python开发专家
 - 🟢 **nodejs-expert** - Node.js开发专家
 
-### 前端开发
-
-#### Web前端
+#### 🌐 前端团队 (engineering/frontend/)
+**Web前端 (web/)**
 - ⚛️ **react-expert** - React开发专家
 - 🖖 **vue-expert** - Vue开发专家
 - 🅰️ **angular-expert** - Angular开发专家
 
-#### 移动端
+**移动端 (mobile/)**
 - 🤖 **android-expert** - Android开发专家
 - 🍎 **ios-expert** - iOS开发专家
 - 🔷 **hongmeng-expert** - 鸿蒙开发专家
 - 🦋 **flutter-expert** - Flutter开发专家
 - ⚛️ **rn-expert** - React Native开发专家
 
-### 架构设计
-- 🏗️ **system-architect** - 系统架构师
-- 💾 **data-architect** - 数据架构师
-- 🔒 **security-architect** - 安全架构师
-
-### 数据与算法
+#### 📊 数据团队 (engineering/data/)
 - 📊 **bigdata-expert** - 大数据开发专家
 - 🔄 **etl-expert** - ETL开发专家
 - 📈 **bi-expert** - BI分析专家
-- 🤖 **ml-expert** - 机器学习专家
-- 💬 **nlp-expert** - 自然语言处理专家
-- 👁️ **cv-expert** - 计算机视觉专家
+- 🗄️ **dba-expert** - 数据库管理专家
+- 📱 **nosql-expert** - NoSQL专家
 
-### 测试质量
+#### 🤖 算法团队 (engineering/algorithm/)
+**基础技术专家**
+- 🤖 **ml-expert** - 机器学习专家
+- 👁️ **cv-expert** - 计算机视觉专家
+- 💬 **nlp-expert** - 自然语言处理专家
+- 🔊 **audio-expert** - 音频处理专家
+
+**业务应用专家**
+- 🎯 **recommendation-expert** - 推荐算法专家
+- 🔍 **search-expert** - 搜索算法专家
+- 🛡️ **risk-control-expert** - 风控算法专家
+- 📺 **advertising-expert** - 广告算法专家
+- 🎮 **game-algorithm-expert** - 游戏算法专家
+
+#### 🧪 测试团队 (engineering/qa/)
 - 🏛️ **test-architect** - 测试架构师
 - 🤖 **automation-expert** - 自动化测试专家
 - ⚡ **performance-expert** - 性能测试专家
 - 🔐 **security-tester** - 安全测试专家
 - 🔍 **manual-tester** - 手工测试专家
-- 👀 **code-reviewer** - 代码审查专家
 
-### 基础设施与运维
+#### 🏗️ 基础设施团队 (engineering/infrastructure/)
 - 🔧 **devops-expert** - DevOps专家
 - 🖥️ **infrastructure-expert** - 基础设施专家
 - ☁️ **cloud-expert** - 云平台专家
 - 🌐 **network-expert** - 网络专家
 
-### 运营与安全
+#### 🔒 安全团队 (engineering/security/)
+- 🛡️ **security-expert** - 安全专家
+- ⚖️ **compliance-expert** - 合规专家
+- ⚠️ **risk-expert** - 风险管理专家
+- 🤖 **ai-safety-expert** - AI安全专家
+
+#### 📈 技术运营团队 (engineering/operations/)
 - 📊 **product-operations** - 产品运营专家
 - 📈 **data-operations** - 数据运营专家
 - 🎯 **marketing-operations** - 营销运营专家
-- 🛡️ **security-expert** - 安全专家
-- ⚖️ **compliance-expert** - 合规专家
 
-## 📚 工作流程指南
+### 🎯 营销部门 (marketing/)
+- 🏆 **brand-marketing-expert** - 品牌营销专家
+- 💻 **digital-marketing-expert** - 数字营销专家
+- 📱 **social-media-expert** - 自媒体营销专家
+- 📈 **growth-marketing-expert** - 增长营销专家
 
-### 三阶段工作流
+### 💼 销售部门 (sales/)
+- 💼 **sales-expert** - 销售专家
+- 🏢 **enterprise-sales-expert** - 企业级销售专家
+- 🔧 **presales-engineer** - 售前技术专家
 
-1. **🔍 分析设计阶段** - [查看指南](workflows/analysis-design-guide.md)
-   - 需求分析、系统设计、技术选型
-   - 推荐智能体：business-analyst, product-manager, system-architect
+### 🎧 客户服务部门 (customer-service/)
+- 🎧 **customer-support-expert** - 客户支持专家
+- 🔧 **technical-support-expert** - 技术支持专家
+- 🌟 **customer-success-expert** - 客户成功专家
 
-2. **💻 开发测试阶段** - [查看指南](workflows/development-guide.md)
-   - 功能开发、质量测试、集成验证
-   - 推荐智能体：各技术栈expert, test-expert, code-reviewer
+### 📊 智能体总数：61个
 
-3. **🚀 运营维护阶段** - [查看指南](workflows/operations-guide.md)
-   - 部署发布、监控运营、持续优化
-   - 推荐智能体：devops-expert, monitoring-expert, bi-expert
+## 📚 使用指南
+
+### VP级别协调使用场景
+
+**🏗️ 技术项目协调**
+- 使用 `vp-technology` 统筹跨技术团队项目
+- 管辖：工程、基础设施、安全、技术运营
+
+**📱 产品策略协调**  
+- 使用 `vp-product` 统筹产品规划和管理
+- 管辖：产品团队
+
+**🎨 创意设计协调**
+- 使用 `vp-creative` 统筹设计和内容创作
+- 管辖：设计团队、内容团队
+
+**🎯 营销策略协调**
+- 使用 `vp-marketing` 统筹品牌和数字营销
+- 管辖：营销团队
+
+**💼 销售流程协调**
+- 使用 `vp-sales` 统筹销售和售前
+- 管辖：销售团队、售前支持
+
+**🎧 客户体验协调**
+- 使用 `vp-customer` 统筹客户成功和支持
+- 管辖：客户服务团队
+
+### 三层使用模式
+
+1. **🎯 单一任务**：直接使用领域专家
+   ```bash
+   claude --agent golang-expert "优化这段代码"
+   ```
+
+2. **🤝 跨团队协作**：使用VP协调者
+   ```bash
+   claude --agent vp-technology "协调前后端API接口设计"
+   ```
+
+3. **🏢 全流程管理**：组合多个VP
+   ```bash
+   claude --agents "vp-product,vp-creative,vp-technology,vp-marketing" "规划新产品发布"
+   ```
 
 ## 🔧 自定义智能体
 
