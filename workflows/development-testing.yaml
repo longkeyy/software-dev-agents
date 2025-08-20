@@ -1,0 +1,249 @@
+name: development-testing
+display_name: "开发测试阶段"
+description: "功能开发、质量测试、集成验证"
+
+# 工作流程阶段定义
+stage:
+  type: "development-testing"
+  sequence: 2
+  duration: "8-16周"
+
+# 参与角色定义
+participants:
+  # 核心开发团队
+  core_development:
+    - department: engineering.backend
+      agents: 
+        - java-expert         # Java后端开发
+        - golang-expert       # Go后端开发
+        - python-expert       # Python后端开发
+        - nodejs-expert       # Node.js后端开发
+      selection_strategy: "根据技术选型选择1-2个"
+    
+    - department: engineering.frontend.web
+      agents: 
+        - react-expert        # React前端开发
+        - vue-expert          # Vue前端开发
+        - angular-expert      # Angular前端开发
+      selection_strategy: "根据技术选型选择1个"
+    
+    - department: engineering.frontend.mobile
+      agents: 
+        - android-expert      # Android开发
+        - ios-expert          # iOS开发
+        - hongmeng-expert     # 鸿蒙开发
+        - flutter-expert      # Flutter跨平台
+        - rn-expert           # React Native跨平台
+      selection_strategy: "根据平台需求选择"
+
+  # 数据和算法团队
+  data_algorithm:
+    - department: engineering.data
+      agents: 
+        - bigdata-expert      # 大数据处理
+        - etl-expert          # 数据集成
+        - bi-expert           # 数据分析
+    
+    - department: engineering.algorithm
+      agents: 
+        - ml-expert           # 机器学习
+        - nlp-expert          # 自然语言处理
+        - cv-expert           # 计算机视觉
+      selection_strategy: "根据AI需求选择"
+
+  # 质量保证团队
+  quality_assurance:
+    - department: engineering.qa
+      agents: 
+        - test-architect      # 测试架构设计
+        - automation-expert   # 自动化测试
+        - performance-expert  # 性能测试
+        - security-tester     # 安全测试
+        - manual-tester       # 手工测试
+    
+    - department: engineering
+      agents: 
+        - code-reviewer       # 代码审查
+
+# 协作模式
+collaboration_patterns:
+  - name: "后端API开发"
+    flow: "system-architect → backend-expert → api-testing"
+    description: "架构设计 → 后端实现 → API测试"
+  
+  - name: "前端Web开发"
+    flow: "ux-designer → frontend-web-expert → integration-testing"
+    description: "UI设计 → Web前端实现 → 集成测试"
+  
+  - name: "移动端开发"
+    flow: "ux-designer → mobile-expert → device-testing"
+    description: "移动UI设计 → 移动端实现 → 设备测试"
+  
+  - name: "数据管道开发"
+    flow: "data-architect → etl-expert → data-testing"
+    description: "数据设计 → ETL实现 → 数据质量测试"
+  
+  - name: "AI模型集成"
+    flow: "ml-expert → backend-expert → model-testing"
+    description: "模型训练 → 服务集成 → 模型性能测试"
+
+# 开发流程
+development_process:
+  methodology: "敏捷开发 (Scrum/Kanban)"
+  iteration_length: "2-4周"
+  
+  sprint_activities:
+    planning:
+      - "Sprint计划会议"
+      - "任务分解和估算"
+      - "开发任务分配"
+    
+    development:
+      - "每日站会(Daily Standup)"
+      - "功能开发和代码提交"
+      - "持续集成和构建"
+      - "代码审查(Code Review)"
+    
+    testing:
+      - "单元测试编写"
+      - "集成测试执行"
+      - "自动化测试运行"
+      - "缺陷修复和回归测试"
+    
+    review:
+      - "Sprint演示(Demo)"
+      - "Sprint回顾会议"
+      - "持续改进计划"
+
+# 质量保证策略
+quality_strategy:
+  testing_pyramid:
+    - level: "单元测试"
+      coverage: "80%+"
+      responsibility: "开发工程师"
+      tools: ["JUnit", "Jest", "Pytest"]
+    
+    - level: "集成测试"
+      coverage: "主要业务流程"
+      responsibility: "测试工程师"
+      tools: ["Postman", "REST Assured", "Cypress"]
+    
+    - level: "端到端测试"
+      coverage: "关键用户场景"
+      responsibility: "自动化测试工程师"
+      tools: ["Selenium", "Playwright", "Appium"]
+  
+  code_quality:
+    - "代码审查(Code Review)"
+    - "静态代码分析(SonarQube)"
+    - "安全扫描(SAST/DAST)"
+    - "依赖漏洞检查"
+
+# 主要产出物
+deliverables:
+  code:
+    - "后端服务代码"
+    - "前端Web应用代码"
+    - "移动应用代码"
+    - "数据处理脚本"
+    - "AI模型和训练代码"
+  
+  testing:
+    - "单元测试代码"
+    - "集成测试脚本"
+    - "自动化测试套件"
+    - "性能测试报告"
+    - "安全测试报告"
+  
+  deployment:
+    - "构建脚本和CI/CD配置"
+    - "容器化配置(Docker)"
+    - "部署文档和运维手册"
+    - "环境配置说明"
+  
+  documentation:
+    - "API接口文档"
+    - "代码注释和技术文档"
+    - "用户使用手册"
+    - "系统配置说明"
+
+# 质量检查点
+quality_gates:
+  - name: "代码质量检查"
+    criteria:
+      - "代码审查通过率 > 95%"
+      - "单元测试覆盖率 > 80%"
+      - "静态代码分析无严重问题"
+    frequency: "每次代码提交"
+  
+  - name: "功能测试检查"
+    criteria:
+      - "集成测试通过率 > 95%"
+      - "API测试全部通过"
+      - "用户界面测试通过"
+    frequency: "每个Sprint结束"
+  
+  - name: "系统测试检查"
+    criteria:
+      - "端到端测试场景通过"
+      - "性能指标达到设计要求"
+      - "安全扫描无高危漏洞"
+    frequency: "每个Release前"
+
+# 技术债务管理
+technical_debt:
+  identification:
+    - "代码异味检测"
+    - "架构风险评估"
+    - "性能瓶颈分析"
+  
+  prioritization:
+    - "影响业务功能的高优先级"
+    - "影响系统稳定性的中优先级"
+    - "代码维护性的低优先级"
+  
+  resolution:
+    - "每个Sprint分配20%时间处理技术债务"
+    - "重构任务纳入产品Backlog"
+    - "定期进行代码重构专项"
+
+# 性能优化
+performance_optimization:
+  backend:
+    - "数据库查询优化"
+    - "缓存策略实施"
+    - "API响应时间优化"
+    - "并发处理能力提升"
+  
+  frontend:
+    - "页面加载速度优化"
+    - "资源打包和压缩"
+    - "图片和媒体优化"
+    - "用户体验性能提升"
+  
+  mobile:
+    - "应用启动时间优化"
+    - "内存使用优化"
+    - "电池消耗优化"
+    - "网络请求优化"
+
+# 常见问题和解决方案
+common_issues:
+  - issue: "集成测试环境不稳定"
+    solution: "建立独立的测试环境，实施环境自动化部署"
+    responsible: ["devops-expert", "test-architect"]
+  
+  - issue: "跨团队协作效率低"
+    solution: "建立清晰的接口契约，实施API优先开发模式"
+    responsible: ["system-architect", "backend-expert"]
+  
+  - issue: "代码质量参差不齐"
+    solution: "强化代码审查流程，建立编码规范和最佳实践"
+    responsible: ["code-reviewer", "tech-lead"]
+
+# 下一阶段准备
+next_stage_preparation:
+  - "生产环境部署准备"
+  - "运维监控体系建设"
+  - "用户培训材料准备"
+  - "发布计划制定"
