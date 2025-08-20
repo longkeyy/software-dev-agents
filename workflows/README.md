@@ -60,7 +60,8 @@
 - **bi-expert** - 商业智能专家，专注于数据可视化和分析报表系统建设
 - **bigdata-expert** - 大数据专家，专注于分布式数据处理和实时分析系统
 - **etl-expert** - ETL专家，专注于数据集成、清洗和数据管道建设
-- **dba-expert** - 数据库管理专家，专注于数据库性能优化、备份恢复和多数据库平台管理
+- **dba-expert** - 数据库管理专家，专注于关系型数据库性能优化、备份恢复和传统数据库管理
+- **nosql-expert** - NoSQL数据库专家，专注于分布式NoSQL系统、多模型数据库和大规模非关系型数据解决方案
 
 #### 质量保证团队 (Quality Assurance Team)
 - **test-architect** - 测试架构师，专注于测试策略设计和自动化测试框架建设
@@ -204,7 +205,8 @@ claude --agents "devops-expert,cloud-expert,security-expert,data-operations,bi-e
 - **大数据处理** → bigdata-expert
 - **商业智能** → bi-expert
 - **数据工程** → etl-expert
-- **数据库管理** → dba-expert
+- **关系型数据库** → dba-expert
+- **NoSQL数据库** → nosql-expert
 
 ### 基础设施
 - **云平台** → cloud-expert
