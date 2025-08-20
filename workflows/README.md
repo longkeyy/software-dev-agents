@@ -52,9 +52,18 @@
 - **hongmeng-expert** - 鸿蒙系统专家，专注于华为生态应用开发和分布式特性
 
 #### 算法团队 (Algorithm Team)
-- **ml-expert** - 机器学习专家，专注于生产级AI系统和MLOps流程建设
-- **cv-expert** - 计算机视觉专家，专注于图像处理和视觉AI应用开发
-- **nlp-expert** - 自然语言处理专家，专注于文本分析和对话系统开发
+
+**基础技术专家 (Foundation Experts):**
+- **ml-expert** - 机器学习专家，专注于传统ML算法、特征工程和MLOps工程实践
+- **cv-expert** - 计算机视觉专家，专注于图像/视频处理、目标检测和视觉AI应用
+- **nlp-expert** - 自然语言处理专家，专注于文本理解、语言模型和NLP技术栈
+- **audio-expert** - 音频处理专家，专注于语音识别、音频生成和声音信号处理
+
+**业务应用专家 (Business Experts):**
+- **recommendation-expert** - 推荐算法专家，专注于个性化推荐、协同过滤和用户行为建模
+- **search-expert** - 搜索算法专家，专注于信息检索、语义搜索和搜索质量优化
+- **risk-control-expert** - 风控算法专家，专注于反欺诈、信用评估和金融风险管理
+- **advertising-expert** - 广告算法专家，专注于程序化广告、投放优化和效果归因
 
 #### 数据团队 (Data Team)
 - **bi-expert** - 商业智能专家，专注于数据可视化和分析报表系统建设
@@ -199,9 +208,20 @@ claude --agents "devops-expert,cloud-expert,security-expert,data-operations,bi-e
 - **Node.js** → nodejs-expert
 
 ### 数据与AI
-- **机器学习** → ml-expert
+
+**基础算法技术:**
+- **机器学习工程** → ml-expert
 - **计算机视觉** → cv-expert
 - **自然语言处理** → nlp-expert
+- **音频处理** → audio-expert
+
+**业务算法应用:**
+- **推荐系统** → recommendation-expert
+- **搜索系统** → search-expert
+- **风控反欺诈** → risk-control-expert
+- **程序化广告** → advertising-expert
+
+**数据平台技术:**
 - **大数据处理** → bigdata-expert
 - **商业智能** → bi-expert
 - **数据工程** → etl-expert
