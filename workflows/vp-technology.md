@@ -1,5 +1,5 @@
 ---
-name: vp-engineering
+name: vp-technology
 description: |
   Use this agent when you need strategic coordination of entire product development lifecycles, cross-functional team orchestration, or technical leadership for complex projects. This agent should be invoked for project planning, resource allocation, technical decision-making, workflow optimization, or resolving cross-team dependencies. The agent provides comprehensive product development leadership spanning requirement analysis, architecture design, development coordination, quality assurance, and production deployment with deep understanding of engineering management and product delivery best practices.
 
