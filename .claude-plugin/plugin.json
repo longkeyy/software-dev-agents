@@ -2,7 +2,18 @@
   "name": "software-dev-agents",
   "version": "1.0.0",
   "description": "Enterprise-grade software development agents covering the complete SDLC lifecycle. Includes expert-level specialists (frontend, backend, algorithm, QA, etc.) and VP-level coordinators for cross-team orchestration.",
-  "author": "longkeyy",
-  "homepage": "https://github.com/longkeyy/software-dev-agents",
-  "agents": "./agents"
+  "author": {
+    "name": "longkeyy"
+  },
+  "repository": "https://github.com/longkeyy/software-dev-agents",
+  "keywords": [
+    "agents",
+    "software-development",
+    "sdlc",
+    "frontend",
+    "backend",
+    "devops",
+    "product",
+    "design"
+  ]
 }
