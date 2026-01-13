@@ -15,8 +15,16 @@
 
 ```bash
 # 方式一：通过 Claude Code marketplace 安装（推荐）
+
+# 1. 添加市场（仅首次需要）
 claude plugin marketplace add zhiliyouxian/claude-plugins-marketplace
-claude plugin install zhiliyouxian/software-dev-agents
+
+# 2. 安装插件（格式：插件名@市场名）
+claude plugin install software-dev-agents@zhiliyouxian
+
+# 可选：指定安装范围
+claude plugin install software-dev-agents@zhiliyouxian -s project  # 仅当前项目
+claude plugin install software-dev-agents@zhiliyouxian -s user     # 用户级别（默认）
 
 # 方式二：手动安装
 git clone https://github.com/longkeyy/software-dev-agents.git
@@ -24,7 +32,25 @@ cd software-dev-agents
 ./install.sh
 ```
 
-选择 **Plugin mode (推荐)** 以获得最佳性能。
+### 更新插件
+
+```bash
+# 更新市场索引
+claude plugin marketplace update zhiliyouxian
+
+# 更新插件到最新版本
+claude plugin update software-dev-agents
+```
+
+### 卸载插件
+
+```bash
+# 卸载插件
+claude plugin uninstall software-dev-agents
+
+# 如需移除市场
+claude plugin marketplace remove zhiliyouxian
+```
 
 ### 使用
 
