@@ -15,7 +15,7 @@
 
 ```bash
 # 方式一：通过 Claude Code marketplace 安装（推荐）
-claude plugin marketplace add github.com/longkeyy/software-dev-agents
+claude plugin marketplace add longkeyy/software-dev-agents
 claude plugin install software-dev-agents
 
 # 方式二：手动安装
