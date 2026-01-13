@@ -110,11 +110,13 @@ claude-code-agents/
 │   │   ├── sales/
 │   │   └── customer-service/
 │   └── workflows/           # VP级协调者
+├── skills/
+│   └── workflow-coordinator/ # 研发流程协调技能
+│       └── SKILL.md
 ├── scripts/
 │   └── optimize-agents.py   # Agent优化工具
 ├── install.sh               # 安装脚本
-├── uninstall.sh             # 卸载脚本
-└── agent-workflow-guide.md  # 工作流程指南
+└── uninstall.sh             # 卸载脚本
 ```
 
 ## 🔧 管理操作
@@ -175,7 +177,7 @@ description: |
 
 ## 📚 相关文档
 
-- [工作流程指南](agent-workflow-guide.md)
+- [工作流程协调技能](skills/workflow-coordinator/SKILL.md)
 - [Claude Code 官方文档](https://docs.anthropic.com/en/docs/claude-code)
 - [Claude Code Plugins 文档](https://code.claude.com/docs/en/plugins)
 
