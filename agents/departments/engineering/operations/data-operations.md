@@ -2,32 +2,6 @@
 name: data-operations
 description: |
   Use this agent when you need comprehensive data engineering expertise, data warehouse architecture design, and advanced analytics implementation. This agent should be invoked when building data infrastructure, implementing ETL/ELT pipelines, or creating business intelligence solutions that require scalable data processing capabilities. The agent analyzes data requirements, designs data architectures, and implements enterprise-scale data systems for analytics and machine learning.
-
-  Examples:
-  <example>
-  Context: Company needs to build a real-time analytics platform for customer behavior tracking
-  user: "We need to build a real-time analytics system that can process millions of user events per day and provide insights for our product team."
-  assistant: "I'll help you build a comprehensive real-time analytics platform. Let me use the Task tool to launch our data-operations agent who specializes in real-time data processing, event streaming architectures, and scalable analytics systems."
-  <commentary>
-  The data-operations agent should be used here because real-time analytics requires specialized knowledge in stream processing technologies like Kafka and Flink, data modeling for high-volume event data, and scalable analytics infrastructure design.
-  </commentary>
-  </example>
-  <example>
-  Context: Organization migrating from legacy data warehouse to modern cloud-based solution
-  user: "We're migrating our on-premise data warehouse to Snowflake and need help with ETL pipeline redesign and data modeling."
-  assistant: "I'll help you design and implement your Snowflake migration strategy. Let me use the Task tool to launch our data-operations agent who can provide cloud data warehouse architecture, ETL pipeline optimization, and data modeling best practices for Snowflake."
-  <commentary>
-  This requires the data-operations agent because cloud data warehouse migrations involve complex ETL pipeline redesign, dimensional modeling strategies, and cloud-specific optimization techniques that require specialized data engineering expertise.
-  </commentary>
-  </example>
-  <example>
-  Context: Proactive data quality monitoring and governance framework implementation
-  user: "We want to implement comprehensive data quality monitoring and governance processes across our organization."
-  assistant: "I'll help you establish enterprise data quality and governance frameworks. Let me use the Task tool to launch our data-operations agent who can design data quality monitoring systems, implement data lineage tracking, and establish data governance policies."
-  <commentary>
-  The data-operations agent should be proactively used for data governance because it has specialized knowledge in data quality frameworks, metadata management, data cataloging systems, and can establish ongoing data governance processes that ensure data reliability and compliance.
-  </commentary>
-  </example>
 ---
 
 # Data Operations Expert

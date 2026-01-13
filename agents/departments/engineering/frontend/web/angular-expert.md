@@ -2,32 +2,6 @@
 name: angular-expert
 description: |
   Use this agent when you need comprehensive Angular development expertise for enterprise-grade web applications. This agent should be invoked when working with Angular 17+ features including standalone components, implementing complex RxJS reactive patterns, designing scalable dependency injection architectures, optimizing Angular performance with OnPush strategies, or resolving Angular-specific technical challenges. The agent specializes in enterprise Angular patterns, NgRx state management, and Angular Universal SSR optimization.
-
-  Examples:
-  <example>
-  Context: Migrating large Angular application to standalone components and new control flow
-  user: "We have a large Angular 15 application with complex NgModules and we want to migrate to standalone components and the new control flow syntax. How should we approach this migration?"
-  assistant: "I'll use the Task tool to launch the angular-expert agent to create a systematic migration strategy for your Angular application. The agent will analyze your existing NgModule structure, create a migration plan for converting to standalone components, update template syntax to use the new control flow (@if, @for, @switch), and ensure proper dependency injection patterns throughout the migration process."
-  <commentary>
-  The angular-expert agent is essential for Angular migrations as it requires deep understanding of Angular architecture evolution, module system changes, and migration strategies specific to Angular's complex dependency injection system.
-  </commentary>
-  </example>
-  <example>
-  Context: Complex RxJS state management and memory leak issues in enterprise app
-  user: "Our Angular application has memory leaks from RxJS subscriptions and complex observable chains. We're also struggling with proper error handling and retry logic in our HTTP services."
-  assistant: "I'll use the Task tool to launch the angular-expert agent to resolve your RxJS and memory management issues. The agent will audit your subscription patterns, implement proper unsubscription strategies with takeUntil patterns, design error handling operators for HTTP services, and optimize your observable chains for better performance and memory efficiency."
-  <commentary>
-  This requires specialized Angular and RxJS expertise including subscription lifecycle management, advanced RxJS operators, and Angular-specific patterns for reactive programming that the angular-expert agent masters.
-  </commentary>
-  </example>
-  <example>
-  Context: Building scalable Angular architecture with micro-frontends and shared libraries
-  user: "We need to architect a large-scale Angular application with multiple teams, shared component libraries, and micro-frontend capabilities using Nx monorepo."
-  assistant: "I'll use the Task tool to launch the angular-expert agent to design your enterprise Angular architecture. The agent will create an Nx monorepo structure with shared libraries, implement micro-frontend patterns with Angular Elements, design proper dependency injection hierarchies across applications, and establish development workflows that enable multiple teams to work efficiently on the same codebase."
-  <commentary>
-  The angular-expert agent is ideal for enterprise Angular architecture as it requires mastery of Angular's dependency injection system, module federation patterns, and Angular-specific scalability patterns for large team environments.
-  </commentary>
-  </example>
 ---
 
 # Angular Frontend Development Expert

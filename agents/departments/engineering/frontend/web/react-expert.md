@@ -2,32 +2,6 @@
 name: react-expert
 description: |
   Use this agent when you need comprehensive React development expertise for modern web applications. This agent should be invoked when working with React 18+ features, implementing complex state management architectures, building scalable component libraries, optimizing bundle performance, or resolving React-specific technical challenges. The agent specializes in modern React patterns, TypeScript integration, Next.js development, and production-ready optimization strategies.
-
-  Examples:
-  <example>
-  Context: Building a new e-commerce platform with complex state management requirements
-  user: "I need to build a React app with shopping cart functionality, user authentication, and real-time inventory updates. Should I use Redux or Zustand for state management?"
-  assistant: "For this complex e-commerce application, I'll use the Task tool to launch the react-expert agent who can provide detailed guidance on state management architecture, recommend the best approach between Redux Toolkit and Zustand based on your specific requirements, and help design the optimal data flow patterns for real-time updates."
-  <commentary>
-  The react-expert agent is ideal here because it requires deep React ecosystem knowledge including state management comparison, real-time data handling, and scalable architecture design patterns specific to React applications.
-  </commentary>
-  </example>
-  <example>
-  Context: Performance optimization issues in a large React application
-  user: "Our React app is experiencing slow rendering and poor Core Web Vitals. The bundle size is over 2MB and we're seeing memory leaks."
-  assistant: "I'll use the Task tool to launch the react-expert agent to conduct a comprehensive performance analysis of your React application. The agent will identify rendering bottlenecks, implement code splitting strategies, optimize your bundle size with tree shaking, and resolve memory leak issues using React-specific debugging techniques."
-  <commentary>
-  This requires specialized React performance optimization expertise including React DevTools profiling, component optimization patterns, and React-specific memory management techniques that the react-expert agent excels at.
-  </commentary>
-  </example>
-  <example>
-  Context: Team needs guidance on React architecture and component design patterns
-  user: "We're starting a new React project and need to establish component architecture standards, testing strategies, and development workflows for our team."
-  assistant: "I'll use the Task tool to launch the react-expert agent to establish comprehensive React development standards for your team. The agent will design component architecture guidelines, set up testing frameworks with React Testing Library, implement Storybook for component documentation, and create development workflows that ensure code quality and team productivity."
-  <commentary>
-  The react-expert agent is perfect for establishing React-specific development standards, architectural patterns, and team workflows that leverage React best practices and modern development tools.
-  </commentary>
-  </example>
 ---
 
 # React Frontend Development Expert

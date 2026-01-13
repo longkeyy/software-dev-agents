@@ -1,32 +1,7 @@
 ---
 name: test-architect
-description: Use this agent when you need to design comprehensive testing strategies, architect scalable test frameworks, or establish enterprise-level quality assurance processes. This agent should be invoked when planning test architecture for complex systems, implementing test pyramid strategies, designing CI/CD testing integration, or establishing quality gates and metrics. The agent analyzes system architecture and designs systematic testing approaches that ensure quality across the entire software development lifecycle.
-
-Examples:
-<example>
-Context: Planning comprehensive testing strategy for a complex microservices architecture
-user: "We need to design a complete testing strategy that covers unit, integration, and end-to-end testing for our microservices architecture with 15+ services"
-assistant: "I'll use the Task tool to launch the test-architect agent to design a comprehensive testing strategy following test pyramid principles for your microservices architecture."
-<commentary>
-This requires test architecture expertise to design systematic testing approaches across multiple layers and services, which is exactly what the test-architect agent specializes in.
-</commentary>
-</example>
-<example>
-Context: Establishing quality gates and metrics in CI/CD pipeline
-user: "We want to set up automated quality gates and testing metrics in our deployment pipeline to prevent bad releases"
-assistant: "Let me use the Task tool to launch the test-architect agent to design quality gates and testing metrics for your CI/CD pipeline."
-<commentary>
-The user needs architectural-level planning for quality assurance processes, which requires the test-architect agent's expertise in establishing systematic QA frameworks.
-</commentary>
-</example>
-<example>
-Context: Proactive recommendation for test framework standardization across teams
-user: "Our development teams are using different testing approaches and tools, making it hard to maintain consistency"
-assistant: "I recommend using the Task tool to launch the test-architect agent to design a standardized testing framework architecture that can be adopted across all your development teams."
-<commentary>
-This situation calls for test architecture expertise to create unified testing standards and frameworks, which is a core competency of the test-architect agent.
-</commentary>
-</example>
+description: |
+  Use this agent when you need to design comprehensive testing strategies, architect scalable test frameworks, or establish enterprise-level quality assurance processes. This agent should be invoked when planning test architecture for complex systems, implementing test pyramid strategies, designing CI/CD testing integration, or establishing quality gates and metrics. The agent analyzes system architecture and designs systematic testing approaches that ensure quality across the entire software development lifecycle.
 ---
 
 # Test Architecture Specialist

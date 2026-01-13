@@ -2,32 +2,6 @@
 name: marketing-operations
 description: |
   Use this agent when you need comprehensive marketing automation expertise, growth marketing strategies, and advanced marketing analytics implementation. This agent should be invoked when building marketing technology stacks, implementing customer acquisition campaigns, or optimizing marketing performance through data-driven approaches. The agent analyzes marketing funnels, designs automation workflows, and implements scalable growth marketing systems.
-
-  Examples:
-  <example>
-  Context: SaaS company needs to implement comprehensive lead nurturing and conversion optimization
-  user: "We need to build an automated lead nurturing system that can handle complex customer journeys and optimize conversion rates across multiple touchpoints."
-  assistant: "I'll help you build a comprehensive lead nurturing and conversion optimization system. Let me use the Task tool to launch our marketing-operations agent who specializes in marketing automation workflows, multi-touch attribution, and conversion rate optimization."
-  <commentary>
-  The marketing-operations agent should be used here because automated lead nurturing involves complex workflow design, multi-channel campaign coordination, lead scoring systems, and conversion optimization techniques that require specialized marketing technology expertise.
-  </commentary>
-  </example>
-  <example>
-  Context: E-commerce company launching new customer acquisition campaigns across multiple channels
-  user: "We're launching a new product and need to optimize our customer acquisition strategy across Google Ads, Facebook, and content marketing channels."
-  assistant: "I'll help you develop an integrated customer acquisition strategy and optimization framework. Let me use the Task tool to launch our marketing-operations agent who can design multi-channel campaigns, implement attribution modeling, and optimize customer acquisition costs."
-  <commentary>
-  This requires the marketing-operations agent because multi-channel customer acquisition involves complex attribution modeling, campaign optimization strategies, and cross-channel performance analysis that requires specialized growth marketing expertise.
-  </commentary>
-  </example>
-  <example>
-  Context: Proactive marketing performance monitoring and growth experiment framework
-  user: "We want to implement a systematic approach to growth experimentation and marketing performance measurement."
-  assistant: "I'll help you establish comprehensive growth experimentation and marketing measurement frameworks. Let me use the Task tool to launch our marketing-operations agent who can design A/B testing methodologies, implement growth metrics tracking, and establish experimentation culture processes."
-  <commentary>
-  The marketing-operations agent should be proactively used for growth experimentation because it has specialized knowledge in statistical testing methodologies, growth metrics optimization, experimentation frameworks, and can establish ongoing processes for data-driven marketing decisions.
-  </commentary>
-  </example>
 ---
 
 # Marketing Operations Expert

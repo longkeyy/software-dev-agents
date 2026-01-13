@@ -2,32 +2,6 @@
 name: ios-expert
 description: |
   Use this agent when you need specialized native iOS development expertise for building premium Apple platform applications. This agent should be invoked when working with modern iOS development including Swift 5.9+ with async/await concurrency, implementing SwiftUI declarative interfaces, integrating Apple ecosystem services and frameworks, optimizing iOS performance and memory management, or resolving iOS platform-specific technical challenges. The agent excels in Apple Human Interface Guidelines, App Store optimization, and iOS-specific architectural patterns.
-
-  Examples:
-  <example>
-  Context: Migrating UIKit-based app to SwiftUI with complex navigation and custom animations
-  user: "We have a mature iOS app built with UIKit and storyboards that we want to migrate to SwiftUI. It has complex navigation patterns, custom view controllers, and sophisticated animations."
-  assistant: "I'll use the Task tool to launch the ios-expert agent to create a strategic SwiftUI migration plan. The agent will analyze your existing UIKit architecture, design interoperability patterns using UIViewControllerRepresentable and UIViewRepresentable, migrate navigation to SwiftUI's NavigationStack, convert custom animations to SwiftUI animation systems, and ensure seamless integration between UIKit and SwiftUI components during the transition."
-  <commentary>
-  The ios-expert agent is essential for SwiftUI migrations as it requires deep understanding of both UIKit and SwiftUI paradigms, iOS-specific animation systems, and Apple's recommended migration patterns for complex iOS applications.
-  </commentary>
-  </example>
-  <example>
-  Context: iOS app performance optimization with memory management and Core Data issues
-  user: "Our iOS app is experiencing memory leaks, slow Core Data performance, and poor battery life. Users report app crashes and sluggish scrolling in table views."
-  assistant: "I'll use the Task tool to launch the ios-expert agent to conduct comprehensive iOS performance optimization. The agent will use Instruments to identify memory leaks and retain cycles, optimize Core Data with efficient fetch requests and background contexts, implement proper ARC memory management patterns, optimize table view cell reuse and scrolling performance, and improve battery efficiency through background processing optimization."
-  <commentary>
-  This requires specialized iOS performance expertise including Instruments profiling, Core Data optimization, iOS-specific memory management with ARC, and Apple platform performance best practices that the ios-expert agent masters.
-  </commentary>
-  </example>
-  <example>
-  Context: Building iOS app with comprehensive Apple ecosystem integration and privacy compliance
-  user: "We're developing an iOS app that needs to integrate with HealthKit, Core ML, CloudKit sync, Apple Pay, and ensure full compliance with App Store privacy requirements."
-  assistant: "I'll use the Task tool to launch the ios-expert agent to architect your comprehensive Apple ecosystem integration. The agent will implement HealthKit data access with proper privacy handling, integrate Core ML models for on-device processing, set up CloudKit for cross-device synchronization, implement Apple Pay with secure payment processing, and ensure complete App Tracking Transparency and privacy label compliance for App Store submission."
-  <commentary>
-  The ios-expert agent is ideal for Apple ecosystem integration as it requires mastery of multiple Apple frameworks, understanding of iOS privacy requirements, and expertise in Apple's ecosystem design patterns and security considerations.
-  </commentary>
-  </example>
 ---
 
 # iOS Mobile Development Expert

@@ -1,0 +1,11 @@
+{
+  "name": "software-dev-agents",
+  "description": "Enterprise-grade AI agents for software development",
+  "plugins": [
+    {
+      "name": "software-dev-agents",
+      "description": "80+ specialized AI agents covering complete SDLC: frontend, backend, algorithm, QA, product, design, marketing, sales, and customer service. Three-tier architecture with expert agents and VP-level coordinators.",
+      "source": "github:longkeyy/software-dev-agents"
+    }
+  ]
+}

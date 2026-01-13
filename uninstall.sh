@@ -1,120 +1,150 @@
 #!/bin/bash
 
-# Claude Code Agents 卸载脚本
-# 安全地移除agents或断开关联
+# Claude Code Agents - Uninstallation Script
+# Removes plugin or legacy installation
 
-set -e  # 遇到错误时退出
+set -e
 
-echo "🗑️ Claude Code Agents 卸载脚本"
-echo "=================================="
+echo "🗑️  Claude Code Agents - Uninstallation"
+echo "========================================"
 
-# 检查 Claude Code 目录是否存在
-if [ ! -d "$HOME/.claude" ]; then
-    echo "❌ 未找到 ~/.claude 目录，无需卸载"
+PLUGIN_LINK="$HOME/.claude/plugins/software-dev-agents"
+LEGACY_AGENTS="$HOME/.claude/agents/departments"
+LEGACY_WORKFLOWS="$HOME/.claude/agents/workflows"
+
+# Check what's installed
+HAS_PLUGIN=false
+HAS_LEGACY=false
+
+if [ -L "$PLUGIN_LINK" ] || [ -d "$PLUGIN_LINK" ]; then
+    HAS_PLUGIN=true
+fi
+
+if [ -d "$LEGACY_AGENTS" ] || [ -d "$LEGACY_WORKFLOWS" ]; then
+    HAS_LEGACY=true
+fi
+
+if [ "$HAS_PLUGIN" = false ] && [ "$HAS_LEGACY" = false ]; then
+    echo "❌ No Claude Code Agents installation detected."
     exit 0
 fi
 
-# 检查是否已安装
-if [ ! -d "$HOME/.claude/agents/departments" ] && [ ! -d "$HOME/.claude/agents/workflows" ]; then
-    echo "❌ 未检测到已安装的 Claude Code Agents"
-    exit 0
-fi
-
-echo "🤔 请选择卸载方式:"
 echo ""
-echo "1) 完全移除 - 删除所有相关文件"
-echo "2) 断开关联 - 只禁用agents，保留文件"
-echo "3) 取消卸载"
+echo "📋 Detected installations:"
+if [ "$HAS_PLUGIN" = true ]; then
+    echo "   • Plugin mode: $PLUGIN_LINK"
+fi
+if [ "$HAS_LEGACY" = true ]; then
+    echo "   • Legacy mode: ~/.claude/agents/{departments,workflows}"
+fi
+
+echo ""
+echo "🤔 Select uninstallation option:"
+echo ""
+echo "1) Complete removal - Remove all installations"
+echo "2) Plugin only - Remove plugin symlink"
+echo "3) Legacy only - Remove legacy agent files"
+echo "4) Cancel"
 echo ""
 
 while true; do
-    read -p "请选择 [1-3]: " choice
+    read -p "Choose option [1-4]: " choice
     case $choice in
         1)
             echo ""
-            echo "📁 正在完全移除 Claude Code Agents..."
-            
-            # 移除我们安装的具体目录
-            if [ -d "$HOME/.claude/agents/departments" ]; then
-                echo "  - 移除 ~/.claude/agents/departments/"
-                rm -rf "$HOME/.claude/agents/departments"
+            echo "🧹 Removing all installations..."
+
+            if [ "$HAS_PLUGIN" = true ]; then
+                echo "  - Removing plugin symlink..."
+                rm -rf "$PLUGIN_LINK"
             fi
-            
-            if [ -d "$HOME/.claude/agents/workflows" ]; then
-                echo "  - 移除 ~/.claude/agents/workflows/"
-                rm -rf "$HOME/.claude/agents/workflows"
-            fi
-            
-            if [ -f "$HOME/.claude/agent-guide.md" ]; then
-                echo "  - 移除 ~/.claude/agent-guide.md"
-                rm -f "$HOME/.claude/agent-guide.md"
-            fi
-            
-            # 尝试移除空的agents目录（如果确实为空）
-            if [ -d "$HOME/.claude/agents" ]; then
-                if [ -z "$(ls -A "$HOME/.claude/agents" 2>/dev/null)" ]; then
-                    echo "  - 移除空的 agents 目录"
-                    rmdir "$HOME/.claude/agents"
-                else
-                    echo "  - 保留 agents 目录（包含其他文件）"
+
+            if [ "$HAS_LEGACY" = true ]; then
+                echo "  - Removing legacy agent files..."
+                rm -rf "$LEGACY_AGENTS"
+                rm -rf "$LEGACY_WORKFLOWS"
+                rm -f "$HOME/.claude/agent-workflow-guide.md"
+
+                # Clean up empty agents directory
+                if [ -d "$HOME/.claude/agents" ]; then
+                    if [ -z "$(ls -A "$HOME/.claude/agents" 2>/dev/null)" ]; then
+                        rmdir "$HOME/.claude/agents"
+                    fi
                 fi
             fi
-            
+
+            # Clean claude.md
+            if [ -f "$HOME/.claude/claude.md" ]; then
+                echo "  - Cleaning claude.md configuration..."
+                temp_file=$(mktemp)
+                awk '
+                /^# Claude Code Agents - START/ { skip = 1; next }
+                /^# Claude Code Agents - END/ { skip = 0; next }
+                !skip { print }
+                ' "$HOME/.claude/claude.md" > "$temp_file"
+                mv "$temp_file" "$HOME/.claude/claude.md"
+            fi
+
             break
             ;;
         2)
+            if [ "$HAS_PLUGIN" = false ]; then
+                echo "❌ No plugin installation found."
+                continue
+            fi
+
             echo ""
-            echo "🔗 正在断开 agents 关联..."
-            echo "  - 文件将保留，仅禁用配置"
-            
+            echo "🧹 Removing plugin installation..."
+            rm -rf "$PLUGIN_LINK"
             break
             ;;
         3)
-            echo "取消卸载"
+            if [ "$HAS_LEGACY" = false ]; then
+                echo "❌ No legacy installation found."
+                continue
+            fi
+
+            echo ""
+            echo "🧹 Removing legacy installation..."
+            rm -rf "$LEGACY_AGENTS"
+            rm -rf "$LEGACY_WORKFLOWS"
+            rm -f "$HOME/.claude/agent-workflow-guide.md"
+
+            # Clean up empty agents directory
+            if [ -d "$HOME/.claude/agents" ]; then
+                if [ -z "$(ls -A "$HOME/.claude/agents" 2>/dev/null)" ]; then
+                    rmdir "$HOME/.claude/agents"
+                fi
+            fi
+
+            # Clean claude.md
+            if [ -f "$HOME/.claude/claude.md" ]; then
+                echo "  - Cleaning claude.md configuration..."
+                temp_file=$(mktemp)
+                awk '
+                /^# Claude Code Agents - START/ { skip = 1; next }
+                /^# Claude Code Agents - END/ { skip = 0; next }
+                !skip { print }
+                ' "$HOME/.claude/claude.md" > "$temp_file"
+                mv "$temp_file" "$HOME/.claude/claude.md"
+            fi
+
+            break
+            ;;
+        4)
+            echo "Cancelled."
             exit 0
             ;;
         *)
-            echo "❌ 无效选择，请输入 1、2 或 3"
+            echo "❌ Invalid choice. Please enter 1-4."
             ;;
     esac
 done
 
-# 清理 claude.md 中的配置
-if [ -f "$HOME/.claude/claude.md" ]; then
-    echo "⚙️ 清理配置文件..."
-    
-    # 创建临时文件
-    temp_file=$(mktemp)
-    
-    # 移除我们的配置块
-    awk '
-    /^# Claude Code Agents - START/ { skip = 1; next }
-    /^# Claude Code Agents - END/ { skip = 0; next }
-    !skip { print }
-    ' "$HOME/.claude/claude.md" > "$temp_file"
-    
-    # 替换原文件
-    mv "$temp_file" "$HOME/.claude/claude.md"
-    
-    echo "  - 已从 ~/.claude/claude.md 中移除配置"
-fi
-
 echo ""
-echo "✅ 卸载完成！"
-echo "=================================="
-
-if [ "$choice" = "2" ]; then
-    echo ""
-    echo "📝 断开关联完成:"
-    echo "  - 文件已保留在 ~/.claude/agents/ 中"
-    echo "  - 如需重新启用，请运行: ./install.sh"
-    echo "  - 如需完全删除，请重新运行此脚本选择选项1"
-else
-    echo ""
-    echo "🗑️ 文件移除完成:"
-    echo "  - Claude Code Agents 已完全卸载"
-    echo "  - 如需重新安装，请运行: ./install.sh"
-fi
-
+echo "✅ Uninstallation complete!"
+echo "========================================"
 echo ""
-echo "感谢使用 Claude Code Agents! 👋"
+echo "To reinstall: ./install.sh"
+echo ""
+echo "Thanks for using Claude Code Agents! 👋"

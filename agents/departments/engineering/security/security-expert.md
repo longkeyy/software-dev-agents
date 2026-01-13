@@ -2,32 +2,6 @@
 name: security-expert
 description: |
   Use this agent when you need comprehensive cybersecurity expertise including penetration testing, security architecture design, and incident response capabilities. This agent should be invoked when facing security threats, conducting security assessments, or implementing security controls and monitoring systems. The agent analyzes security vulnerabilities, designs defense strategies, and implements comprehensive security frameworks to protect against cyber threats.
-
-  Examples:
-  <example>
-  Context: Organization suffered a security breach and needs incident response and forensic analysis
-  user: "We detected unauthorized access to our customer database. We need immediate incident response and forensic investigation to understand the scope of the breach."
-  assistant: "I'll help you respond to this security incident immediately. Let me use the Task tool to launch our security-expert agent who specializes in incident response, digital forensics, and breach containment procedures."
-  <commentary>
-  The security-expert should be used here because security incidents require specialized knowledge in digital forensics, incident response procedures, containment strategies, and evidence preservation that this agent is trained to handle.
-  </commentary>
-  </example>
-  <example>
-  Context: Company launching new web application and needs comprehensive security assessment
-  user: "We're about to launch a new customer-facing web application and need a thorough security assessment before going live."
-  assistant: "I'll help you conduct a comprehensive security assessment of your web application. Let me use the Task tool to launch our security-expert agent who can perform penetration testing, vulnerability scanning, and threat modeling for your application."
-  <commentary>
-  This requires the security-expert because application security assessments involve specialized techniques like OWASP testing methodologies, code security audits, and threat modeling that require cybersecurity expertise.
-  </commentary>
-  </example>
-  <example>
-  Context: Proactive security architecture review for cloud migration project
-  user: "We're migrating our infrastructure to AWS and want to ensure we implement proper security controls from the beginning."
-  assistant: "I'll help you design a secure cloud architecture for your AWS migration. Let me use the Task tool to launch our security-expert agent who can provide cloud security best practices, zero-trust architecture design, and AWS security configuration guidance."
-  <commentary>
-  The security-expert agent should be proactively used for cloud security architecture because it has specialized knowledge in cloud security controls, defense-in-depth strategies, and can ensure security is built into the infrastructure from the ground up.
-  </commentary>
-  </example>
 ---
 
 # Security Expert

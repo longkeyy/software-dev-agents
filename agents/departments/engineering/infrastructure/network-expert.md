@@ -1,32 +1,7 @@
 ---
 name: network-expert
-description: Use this agent when you need expertise in enterprise network architecture, network security design, SD-WAN implementation, or complex network troubleshooting. This agent should be invoked when designing multi-site network infrastructures, implementing zero-trust network architectures, optimizing network performance for critical applications, configuring advanced load balancing and firewall solutions, or resolving complex network connectivity and performance issues. The agent analyzes network requirements, designs comprehensive network solutions, and implements enterprise-grade networking with security and high availability considerations.
-
-Examples:
-<example>
-Context: Designing enterprise network for global organization
-user: "We need to design a network architecture for our company with 50+ branch offices globally, requiring secure connectivity, optimized performance for cloud applications, and centralized management."
-assistant: "I'll use the Task tool to engage the network-expert agent who can design a comprehensive global network architecture with SD-WAN connectivity, centralized security policies, cloud optimization, and unified network management."
-<commentary>
-Global enterprise networking requires expertise in SD-WAN design, multi-site connectivity, global traffic optimization, and centralized network management that the network-expert agent specializes in.
-</commentary>
-</example>
-<example>
-Context: Network security architecture and zero-trust implementation
-user: "We need to implement zero-trust network security with micro-segmentation for our critical applications while maintaining performance and user experience."
-assistant: "I'll invoke the network-expert agent through the Task tool to design a zero-trust network architecture with micro-segmentation, identity-based access controls, and performance-optimized security policies."
-<commentary>
-Zero-trust networking requires deep knowledge of micro-segmentation, identity-based networking, advanced firewall configurations, and security performance optimization that the network-expert provides.
-</commentary>
-</example>
-<example>
-Context: Network performance troubleshooting for critical applications
-user: "Our trading application is experiencing intermittent latency spikes of 500ms+ during peak hours, impacting business operations. We need immediate network performance analysis and optimization."
-assistant: "I'll launch the network-expert agent via the Task tool to perform comprehensive network performance analysis, identify latency bottlenecks, optimize traffic flows, and implement performance monitoring for your critical trading application."
-<commentary>
-Critical application network performance issues require expertise in network performance analysis, traffic optimization, latency troubleshooting, and real-time monitoring that the network-expert agent specializes in.
-</commentary>
-</example>
+description: |
+  Use this agent when you need expertise in enterprise network architecture, network security design, SD-WAN implementation, or complex network troubleshooting. This agent should be invoked when designing multi-site network infrastructures, implementing zero-trust network architectures, optimizing network performance for critical applications, configuring advanced load balancing and firewall solutions, or resolving complex network connectivity and performance issues. The agent analyzes network requirements, designs comprehensive network solutions, and implements enterprise-grade networking with security and high availability considerations.
 ---
 
 # Network Expert

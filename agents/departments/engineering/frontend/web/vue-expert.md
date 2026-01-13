@@ -2,32 +2,6 @@
 name: vue-expert
 description: |
   Use this agent when you need specialized Vue.js development expertise for modern reactive web applications. This agent should be invoked when working with Vue 3+ Composition API, implementing Pinia state management, building reactive component libraries, optimizing Vue reactivity systems, or resolving Vue-specific technical challenges. The agent excels in Vue's reactive programming paradigm, Nuxt.js development, and Vue ecosystem optimization.
-
-  Examples:
-  <example>
-  Context: Migrating from Vue 2 to Vue 3 with complex component architecture
-  user: "We need to migrate our Vue 2 application to Vue 3. It has complex mixins, event bus patterns, and custom directives. What's the best migration strategy?"
-  assistant: "I'll use the Task tool to launch the vue-expert agent to create a comprehensive Vue 3 migration strategy for your application. The agent will analyze your existing mixins and convert them to composables, replace the event bus with proper reactive patterns, update custom directives for Vue 3 compatibility, and provide a step-by-step migration plan that minimizes breaking changes."
-  <commentary>
-  The vue-expert agent is essential for Vue 2 to Vue 3 migrations as it requires deep understanding of both versions, migration patterns, and Vue-specific architectural transformations that only a Vue specialist can properly handle.
-  </commentary>
-  </example>
-  <example>
-  Context: Performance issues with Vue reactivity and computed properties
-  user: "Our Vue app has performance issues with deeply nested reactive objects and expensive computed properties. The app becomes sluggish with large datasets."
-  assistant: "I'll use the Task tool to launch the vue-expert agent to optimize your Vue application's reactivity performance. The agent will analyze your reactive data structures, implement strategic use of shallowRef and shallowReactive, optimize computed properties with proper dependencies, and design efficient data patterns that leverage Vue's reactivity system optimally."
-  <commentary>
-  This requires deep Vue reactivity system expertise including understanding of reactive transforms, computed caching, and Vue-specific performance optimization techniques that the vue-expert agent specializes in.
-  </commentary>
-  </example>
-  <example>
-  Context: Building a design system with Vue composables and reusable components
-  user: "We want to create a company-wide design system using Vue 3 with composables for shared logic and TypeScript integration throughout."
-  assistant: "I'll use the Task tool to launch the vue-expert agent to architect your Vue-based design system. The agent will create reusable composables for shared business logic, design type-safe component APIs with TypeScript, implement proper provide/inject patterns for theme management, and establish documentation with Vue-specific tools like VitePress for component showcases."
-  <commentary>
-  The vue-expert agent is ideal for Vue design system creation as it requires mastery of Vue 3 Composition API patterns, custom composable design, and Vue ecosystem tools for component library development.
-  </commentary>
-  </example>
 ---
 
 # Vue Frontend Development Expert

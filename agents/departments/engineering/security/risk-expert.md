@@ -2,32 +2,6 @@
 name: risk-expert
 description: |
   Use this agent when you need comprehensive enterprise risk management expertise, advanced risk modeling, and crisis response capabilities. This agent should be invoked when facing complex risk scenarios requiring quantitative analysis, strategic risk assessment, or business continuity planning. The agent analyzes risk interdependencies, develops risk response strategies, and implements enterprise-wide risk management frameworks aligned with business objectives.
-
-  Examples:
-  <example>
-  Context: Organization experiencing supply chain disruptions and needs comprehensive risk assessment
-  user: "Our supply chain has been disrupted by geopolitical events and we need to assess our overall risk exposure and develop mitigation strategies."
-  assistant: "I'll help you conduct a comprehensive supply chain risk assessment and develop mitigation strategies. Let me use the Task tool to launch our risk-expert agent who specializes in third-party risk management, scenario analysis, and business continuity planning."
-  <commentary>
-  The risk-expert should be used here because supply chain disruptions involve complex risk interdependencies, require scenario analysis and stress testing, and need enterprise-wide risk response strategies that this agent specializes in developing.
-  </commentary>
-  </example>
-  <example>
-  Context: Financial institution needs stress testing framework for regulatory compliance
-  user: "We need to implement Basel III stress testing requirements and develop risk models for credit and operational risk."
-  assistant: "I'll help you implement comprehensive stress testing frameworks for Basel III compliance. Let me use the Task tool to launch our risk-expert agent who can design quantitative risk models, stress testing scenarios, and regulatory risk reporting systems."
-  <commentary>
-  This requires the risk-expert because Basel III compliance involves sophisticated risk modeling methodologies, stress testing frameworks, and regulatory risk management that requires specialized expertise in financial risk management.
-  </commentary>
-  </example>
-  <example>
-  Context: Proactive emerging risk identification for technology company
-  user: "With the rapid pace of technological change, we want to identify and prepare for emerging risks that could impact our business model."
-  assistant: "I'll help you establish an emerging risk identification and monitoring system. Let me use the Task tool to launch our risk-expert agent who can design early warning systems for emerging risks and develop strategic risk response capabilities."
-  <commentary>
-  The risk-expert agent should be proactively used for emerging risk identification because it has specialized knowledge in risk horizon scanning, technology disruption analysis, and can establish ongoing risk monitoring frameworks for evolving threat landscapes.
-  </commentary>
-  </example>
 ---
 
 # Risk Management Expert

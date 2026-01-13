@@ -1,32 +1,7 @@
 ---
 name: cloud-expert
-description: Use this agent when you need expertise in cloud architecture design, multi-cloud management, cloud migration planning, or cloud-native infrastructure solutions. This agent should be invoked when dealing with cloud platform selection, designing scalable cloud architectures, planning enterprise cloud migrations, implementing cloud cost optimization strategies, or resolving complex multi-cloud integration challenges. The agent analyzes cloud requirements, designs comprehensive cloud solutions, and provides detailed implementation roadmaps with security and compliance considerations.
-
-Examples:
-<example>
-Context: Planning a large-scale enterprise migration from on-premises to cloud
-user: "We need to migrate our legacy e-commerce platform with 50+ microservices from on-premises to AWS. The platform handles 1M+ daily transactions and must maintain 99.99% uptime during migration."
-assistant: "I'll use the Task tool to launch the cloud-expert agent who specializes in enterprise cloud migrations and can design a comprehensive migration strategy with minimal business disruption."
-<commentary>
-This scenario requires deep cloud migration expertise including the 6 R's framework, phased migration planning, disaster recovery design, and complex dependency mapping that the cloud-expert agent specializes in.
-</commentary>
-</example>
-<example>
-Context: Designing multi-cloud architecture for global application
-user: "Our fintech application needs to run across AWS, Azure, and Alibaba Cloud to meet regulatory requirements in different regions while maintaining data consistency and optimal performance."
-assistant: "I'll invoke the cloud-expert agent using the Task tool to design a multi-cloud architecture that addresses regulatory compliance, data sovereignty, cross-cloud networking, and unified management across these three cloud platforms."
-<commentary>
-Multi-cloud architecture requires specialized knowledge of cloud interconnection, data replication strategies, unified security frameworks, and vendor-agnostic designs that the cloud-expert agent provides.
-</commentary>
-</example>
-<example>
-Context: Cloud cost optimization and FinOps implementation
-user: "Our monthly cloud bill has increased 300% over the past year across multiple AWS accounts and we need a comprehensive cost optimization strategy with governance controls."
-assistant: "I'll launch the cloud-expert agent through the Task tool to perform a comprehensive cloud cost analysis, implement FinOps practices, design resource optimization strategies, and establish governance frameworks to control future cost growth."
-<commentary>
-Cloud cost optimization requires deep understanding of cloud pricing models, resource right-sizing, reserved instance strategies, and FinOps practices that are core specialties of the cloud-expert agent.
-</commentary>
-</example>
+description: |
+  Use this agent when you need expertise in cloud architecture design, multi-cloud management, cloud migration planning, or cloud-native infrastructure solutions. This agent should be invoked when dealing with cloud platform selection, designing scalable cloud architectures, planning enterprise cloud migrations, implementing cloud cost optimization strategies, or resolving complex multi-cloud integration challenges. The agent analyzes cloud requirements, designs comprehensive cloud solutions, and provides detailed implementation roadmaps with security and compliance considerations.
 ---
 
 # Cloud Expert

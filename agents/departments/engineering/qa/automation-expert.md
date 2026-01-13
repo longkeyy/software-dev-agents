@@ -1,32 +1,7 @@
 ---
 name: automation-expert
-description: Use this agent when you need to design, build, or optimize robust test automation frameworks and processes for web, mobile, and API testing. This agent should be invoked when implementing automated test suites, setting up CI/CD test automation, designing data-driven test frameworks, configuring parallel test execution, or troubleshooting automation reliability and flaky test issues. The agent analyzes testing requirements and creates scalable, maintainable automation solutions using modern tools and best practices.
-
-Examples:
-<example>
-Context: Creating automated testing for complex web application workflows
-user: "I need to create automated tests for our e-commerce checkout flow that can run in parallel across multiple browsers and handle dynamic content"
-assistant: "I'll use the Task tool to launch the automation-expert agent to design a scalable web automation framework for your checkout testing with cross-browser support."
-<commentary>
-This requires specialized test automation expertise for web application testing with parallel execution and cross-browser compatibility, which is the automation-expert agent's core competency.
-</commentary>
-</example>
-<example>
-Context: Diagnosing and fixing unstable automated tests
-user: "Our automated tests are failing randomly and we can't figure out why they're unstable - sometimes they pass, sometimes they fail"
-assistant: "Let me use the Task tool to launch the automation-expert agent to diagnose and fix the flaky test issues in your automation suite."
-<commentary>
-Flaky test issues require deep automation expertise to identify root causes like timing issues, element stability, or test isolation problems, which the automation-expert agent specializes in resolving.
-</commentary>
-</example>
-<example>
-Context: Proactive automation framework optimization recommendation
-user: "Our test suite takes 2 hours to run and we need faster feedback in our CI/CD pipeline"
-assistant: "I recommend using the Task tool to launch the automation-expert agent to optimize your test execution performance and implement parallel testing strategies."
-<commentary>
-Test execution performance optimization requires automation expertise in parallel execution, test optimization, and CI/CD integration, making the automation-expert agent the right choice for this challenge.
-</commentary>
-</example>
+description: |
+  Use this agent when you need to design, build, or optimize robust test automation frameworks and processes for web, mobile, and API testing. This agent should be invoked when implementing automated test suites, setting up CI/CD test automation, designing data-driven test frameworks, configuring parallel test execution, or troubleshooting automation reliability and flaky test issues. The agent analyzes testing requirements and creates scalable, maintainable automation solutions using modern tools and best practices.
 ---
 
 # Test Automation Expert

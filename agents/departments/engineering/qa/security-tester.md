@@ -1,32 +1,7 @@
 ---
 name: security-tester
-description: Use this agent when you need comprehensive security testing and vulnerability assessment for applications, APIs, and systems. This agent should be invoked when conducting security audits, penetration testing, implementing automated security testing, performing threat modeling, validating compliance requirements, or integrating security testing into CI/CD pipelines. The agent analyzes security risks and implements systematic security testing approaches including SAST, DAST, and manual penetration testing methodologies.
-
-Examples:
-<example>
-Context: Comprehensive security audit for web application before production release
-user: "We need to perform a complete security audit of our web application including penetration testing and vulnerability assessment before we go live"
-assistant: "I'll use the Task tool to launch the security-tester agent to conduct comprehensive security testing including SAST, DAST, and manual penetration testing for your application."
-<commentary>
-This requires specialized security testing expertise to perform thorough vulnerability assessment and penetration testing, which is the security-tester agent's core competency in identifying and mitigating security risks.
-</commentary>
-</example>
-<example>
-Context: Implementing automated security testing in development pipeline
-user: "We want to automate security testing in our CI/CD pipeline to catch vulnerabilities early in the development process"
-assistant: "Let me use the Task tool to launch the security-tester agent to design automated security testing integration for your CI/CD pipeline."
-<commentary>
-Implementing shift-left security practices requires expertise in security automation tools and CI/CD integration, which the security-tester agent specializes in to ensure continuous security validation.
-</commentary>
-</example>
-<example>
-Context: Proactive security assessment for API endpoints
-user: "We just added several new API endpoints - do we need to do any security testing on them?"
-assistant: "I recommend using the Task tool to launch the security-tester agent to perform security testing on your new API endpoints to identify potential vulnerabilities before they're exposed to users."
-<commentary>
-New API endpoints represent potential attack vectors that require security validation through specialized testing techniques, making the security-tester agent essential for proactive security assessment.
-</commentary>
-</example>
+description: |
+  Use this agent when you need comprehensive security testing and vulnerability assessment for applications, APIs, and systems. This agent should be invoked when conducting security audits, penetration testing, implementing automated security testing, performing threat modeling, validating compliance requirements, or integrating security testing into CI/CD pipelines. The agent analyzes security risks and implements systematic security testing approaches including SAST, DAST, and manual penetration testing methodologies.
 ---
 
 # Security Testing Specialist

@@ -1,32 +1,7 @@
 ---
 name: devops-expert
-description: Use this agent when you need expertise in DevOps transformation, CI/CD pipeline optimization, deployment automation, or containerization strategies. This agent should be invoked when implementing DevOps cultural changes, designing complex CI/CD workflows, troubleshooting deployment pipeline failures, setting up comprehensive monitoring and observability systems, or implementing GitOps and infrastructure automation. The agent analyzes development workflows, designs automated delivery pipelines, and implements DevOps best practices with security and reliability considerations.
-
-Examples:
-<example>
-Context: Implementing CI/CD pipeline for microservices architecture
-user: "We have 25 microservices that need independent CI/CD pipelines with automated testing, security scanning, and deployment to Kubernetes across dev, staging, and production environments."
-assistant: "I'll use the Task tool to engage the devops-expert agent who can design a comprehensive CI/CD strategy with pipeline-as-code, automated quality gates, security integration, and Kubernetes deployment workflows for your microservices architecture."
-<commentary>
-Complex microservices CI/CD requires expertise in pipeline orchestration, container workflows, automated testing strategies, and Kubernetes deployment patterns that the devops-expert agent specializes in.
-</commentary>
-</example>
-<example>
-Context: DevOps transformation and cultural change
-user: "Our development team has manual deployment processes taking 2-3 days per release. We need to transform to DevOps practices with automated deployments and faster release cycles."
-assistant: "I'll invoke the devops-expert agent via the Task tool to design a comprehensive DevOps transformation roadmap including process automation, cultural change management, toolchain selection, and progressive implementation strategy."
-<commentary>
-DevOps transformation involves cultural change, process redesign, toolchain integration, and automation strategy that requires the specialized expertise of the devops-expert agent.
-</commentary>
-</example>
-<example>
-Context: Troubleshooting production deployment failures
-user: "Our production deployments are failing 30% of the time with inconsistent errors. We need to implement better deployment strategies and rollback mechanisms."
-assistant: "I'll launch the devops-expert agent through the Task tool to analyze your deployment failures, implement robust deployment strategies like blue-green or canary deployments, and design automated rollback mechanisms with comprehensive monitoring."
-<commentary>
-Deployment reliability issues require deep knowledge of deployment patterns, failure analysis, automated rollback strategies, and production observability that the devops-expert agent provides.
-</commentary>
-</example>
+description: |
+  Use this agent when you need expertise in DevOps transformation, CI/CD pipeline optimization, deployment automation, or containerization strategies. This agent should be invoked when implementing DevOps cultural changes, designing complex CI/CD workflows, troubleshooting deployment pipeline failures, setting up comprehensive monitoring and observability systems, or implementing GitOps and infrastructure automation. The agent analyzes development workflows, designs automated delivery pipelines, and implements DevOps best practices with security and reliability considerations.
 ---
 
 # DevOps Expert

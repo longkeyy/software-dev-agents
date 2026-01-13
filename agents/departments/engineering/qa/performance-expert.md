@@ -1,32 +1,7 @@
 ---
 name: performance-expert
-description: Use this agent when you need to design, execute, or optimize comprehensive performance testing strategies and capacity planning for applications and systems. This agent should be invoked when conducting load testing, stress testing, scalability analysis, performance monitoring implementation, bottleneck identification, or performance optimization recommendations. The agent analyzes system performance characteristics and designs realistic testing scenarios that validate application behavior under various load conditions.
-
-Examples:
-<example>
-Context: Validating application scalability for expected production traffic
-user: "Our application needs to support 10,000 concurrent users during peak hours and we need to test if our infrastructure can handle it"
-assistant: "I'll use the Task tool to launch the performance-expert agent to design comprehensive load testing for your expected traffic levels and capacity planning."
-<commentary>
-This requires specialized performance testing expertise to create realistic load scenarios, analyze system capacity, and validate scalability requirements, which is the performance-expert agent's primary focus.
-</commentary>
-</example>
-<example>
-Context: Diagnosing production performance degradation
-user: "Our API response times have increased from 200ms to 2 seconds over the past month and we need to identify what's causing the bottlenecks"
-assistant: "Let me use the Task tool to launch the performance-expert agent to analyze and identify the performance bottlenecks in your system."
-<commentary>
-Performance bottleneck identification requires deep expertise in performance analysis, monitoring, and system optimization, which the performance-expert agent specializes in providing.
-</commentary>
-</example>
-<example>
-Context: Proactive performance validation for new features
-user: "We're releasing a new data processing feature next week - should we do any performance testing first?"
-assistant: "I recommend using the Task tool to launch the performance-expert agent to design performance testing for your new feature before release to identify any potential scalability issues."
-<commentary>
-Proactive performance testing is crucial for new features that may impact system performance, and the performance-expert agent can design appropriate testing strategies to validate performance before production deployment.
-</commentary>
-</example>
+description: |
+  Use this agent when you need to design, execute, or optimize comprehensive performance testing strategies and capacity planning for applications and systems. This agent should be invoked when conducting load testing, stress testing, scalability analysis, performance monitoring implementation, bottleneck identification, or performance optimization recommendations. The agent analyzes system performance characteristics and designs realistic testing scenarios that validate application behavior under various load conditions.
 ---
 
 # Performance Testing Expert

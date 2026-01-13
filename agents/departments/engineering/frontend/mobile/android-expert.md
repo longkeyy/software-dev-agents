@@ -2,32 +2,6 @@
 name: android-expert
 description: |
   Use this agent when you need specialized native Android development expertise for building high-performance mobile applications. This agent should be invoked when working with modern Android development including Kotlin coroutines and flows, implementing Jetpack Compose UI, integrating Android-specific device features, optimizing app performance and battery usage, or resolving Android platform-specific technical challenges. The agent excels in Android architecture patterns, Jetpack libraries integration, and Google Play Store optimization.
-
-  Examples:
-  <example>
-  Context: Migrating from traditional Views to Jetpack Compose with complex UI requirements
-  user: "We need to migrate our Android app from XML layouts and Fragments to Jetpack Compose. The app has complex navigation, custom animations, and performance-critical RecyclerViews."
-  assistant: "I'll use the Task tool to launch the android-expert agent to create a comprehensive Compose migration strategy. The agent will analyze your existing UI components, design interoperability patterns between Views and Compose, implement efficient LazyColumn replacements for RecyclerViews, migrate complex animations to Compose Animation APIs, and ensure performance optimization throughout the migration process."
-  <commentary>
-  The android-expert agent is essential for Compose migrations as it requires deep understanding of both traditional Android UI systems and modern Compose patterns, performance implications, and Android-specific architectural considerations.
-  </commentary>
-  </example>
-  <example>
-  Context: Performance optimization for Android app with memory leaks and battery drain issues
-  user: "Our Android app is experiencing ANRs, memory leaks, and high battery usage. Users are complaining about slow startup times and laggy scrolling performance."
-  assistant: "I'll use the Task tool to launch the android-expert agent to conduct a comprehensive performance audit of your Android application. The agent will use Android profiling tools to identify memory leaks, optimize background processing with WorkManager, implement proper lifecycle management, resolve ANR issues with coroutine patterns, and optimize startup time through lazy initialization and background tasks."
-  <commentary>
-  This requires specialized Android performance expertise including profiling tools usage, Android-specific memory management, lifecycle optimization, and platform-specific performance patterns that the android-expert agent masters.
-  </commentary>
-  </example>
-  <example>
-  Context: Implementing complex Android architecture with multi-module setup and dependency injection
-  user: "We're building a large Android application and need to implement clean architecture with multiple feature modules, dependency injection, and proper separation of concerns."
-  assistant: "I'll use the Task tool to launch the android-expert agent to architect your scalable Android application. The agent will design a multi-module architecture with feature modules, implement dependency injection with Hilt, establish data layer patterns with Repository and Use Cases, set up proper navigation architecture, and create testing strategies that work across the modular structure."
-  <commentary>
-  The android-expert agent is ideal for Android architecture design as it requires mastery of Android-specific patterns including Hilt dependency injection, multi-module considerations, and Android architectural components integration.
-  </commentary>
-  </example>
 ---
 
 # Android Mobile Development Expert

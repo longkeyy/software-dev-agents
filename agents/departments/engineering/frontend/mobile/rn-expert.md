@@ -2,32 +2,6 @@
 name: rn-expert
 description: |
   Use this agent when you need specialized React Native cross-platform development expertise for building performant mobile applications. This agent should be invoked when working with React Native 0.73+ and the New Architecture (Fabric/TurboModules), implementing complex React patterns with TypeScript integration, creating custom native modules and bridges, optimizing React Native performance and JavaScript thread efficiency, or resolving React Native-specific technical challenges. The agent excels in React Native ecosystem integration, native module development, and cross-platform optimization strategies.
-
-  Examples:
-  <example>
-  Context: Migrating React Native app to New Architecture with TurboModules and Fabric renderer
-  user: "We have a React Native 0.68 app with several native modules and want to upgrade to 0.73+ with the New Architecture. We're concerned about breaking changes and performance implications."
-  assistant: "I'll use the Task tool to launch the rn-expert agent to create a comprehensive New Architecture migration strategy. The agent will audit your existing native modules for Fabric compatibility, create TurboModule implementations to replace legacy native modules, update JavaScript specifications for the new JSI interface, implement proper Codegen integration, and establish testing procedures for both the old and new architecture during the migration."
-  <commentary>
-  The rn-expert agent is essential for New Architecture migrations as it requires deep understanding of React Native's bridge evolution, TurboModules specifications, Fabric renderer changes, and the complex migration patterns specific to React Native applications.
-  </commentary>
-  </example>
-  <example>
-  Context: React Native app performance optimization with JavaScript thread blocking and memory issues
-  user: "Our React Native app has performance problems with slow navigation, JavaScript thread blocking, and memory leaks. Users experience laggy animations and app crashes on older devices."
-  assistant: "I'll use the Task tool to launch the rn-expert agent to optimize your React Native application's performance. The agent will analyze JavaScript thread usage and implement InteractionManager for heavy operations, optimize FlatList rendering with proper getItemLayout and keyExtractor, resolve memory leaks in component lifecycle and navigation, implement proper native driver usage for animations, and establish bundle size optimization with Metro configuration."
-  <commentary>
-  This requires specialized React Native performance expertise including JavaScript bridge optimization, native animation drivers, React Native-specific memory management, and Metro bundler configuration that the rn-expert agent masters.
-  </commentary>
-  </example>
-  <example>
-  Context: Building React Native app with complex native integrations and platform-specific features
-  user: "We're developing a React Native app that needs complex camera functionality, payment processing, push notifications, and deep linking. We want to maximize code sharing while leveraging platform-specific capabilities."
-  assistant: "I'll use the Task tool to launch the rn-expert agent to architect your React Native application with comprehensive native integration. The agent will create custom native modules for camera APIs with proper TypeScript definitions, implement platform-specific payment integrations with unified JavaScript interfaces, set up push notification handling with proper background processing, establish deep linking with React Navigation, and design testing strategies for both JavaScript and native code."
-  <commentary>
-  The rn-expert agent is ideal for complex native integrations as it requires mastery of React Native bridge patterns, native module development for both iOS and Android, platform-specific API integration, and React Native ecosystem tools and libraries.
-  </commentary>
-  </example>
 ---
 
 # React Native Cross-Platform Development Expert

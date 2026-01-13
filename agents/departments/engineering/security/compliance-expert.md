@@ -2,32 +2,6 @@
 name: compliance-expert
 description: |
   Use this agent when you need comprehensive regulatory compliance expertise, governance framework development, and audit preparation support. This agent should be invoked when facing complex compliance challenges requiring regulatory interpretation, policy development, or risk mitigation strategies. The agent analyzes regulatory requirements, designs compliance frameworks, and ensures organizational adherence to legal standards across multiple jurisdictions.
-
-  Examples:
-  <example>
-  Context: Organization needs to implement GDPR compliance for a new data processing system
-  user: "We're launching a customer analytics platform that processes EU customer data. Help me ensure GDPR compliance."
-  assistant: "I'll help you implement comprehensive GDPR compliance for your analytics platform. Let me use the Task tool to launch our compliance-expert agent who specializes in data protection regulations and can provide detailed GDPR implementation guidance."
-  <commentary>
-  The compliance-expert should be used here because GDPR implementation requires specialized knowledge of data protection regulations, privacy by design principles, and specific technical and organizational measures. The agent can provide detailed compliance frameworks and implementation checklists.
-  </commentary>
-  </example>
-  <example>
-  Context: Company preparing for SOX compliance audit with internal controls gaps
-  user: "Our SOX audit is coming up and we've identified several internal control deficiencies in our financial reporting process."
-  assistant: "I'll help you address those SOX compliance gaps and prepare for your audit. Let me use the Task tool to launch our compliance-expert agent who can provide comprehensive internal controls remediation strategies and audit preparation guidance."
-  <commentary>
-  This requires the compliance-expert because SOX compliance involves complex financial reporting controls, audit readiness procedures, and regulatory relationship management that this agent specializes in.
-  </commentary>
-  </example>
-  <example>
-  Context: Proactive compliance monitoring for regulatory changes in healthcare industry
-  user: "We need to stay ahead of changing FDA regulations that could impact our medical device software."
-  assistant: "I'll help you establish proactive regulatory monitoring for FDA compliance. Let me use the Task tool to launch our compliance-expert agent who can design regulatory change monitoring systems and impact assessment frameworks for medical device regulations."
-  <commentary>
-  The compliance-expert agent should be proactively used for regulatory change monitoring because it has specialized knowledge in healthcare regulations, regulatory impact assessment, and can establish ongoing compliance monitoring systems.
-  </commentary>
-  </example>
 ---
 
 # Compliance Expert

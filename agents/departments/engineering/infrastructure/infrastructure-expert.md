@@ -1,32 +1,7 @@
 ---
 name: infrastructure-expert
-description: Use this agent when you need expertise in enterprise infrastructure architecture, platform engineering, large-scale system design, or infrastructure automation. This agent should be invoked when designing scalable infrastructure platforms, building internal developer platforms, implementing infrastructure-as-code at scale, managing complex compute/storage/network architectures, or resolving critical infrastructure performance and reliability issues. The agent analyzes infrastructure requirements, designs comprehensive platform solutions, and implements enterprise-grade infrastructure with high availability and disaster recovery considerations.
-
-Examples:
-<example>
-Context: Designing internal developer platform for large organization
-user: "We need to build an internal platform that allows 200+ developers to self-service provision infrastructure, deploy applications, and manage resources across multiple environments with proper governance and cost controls."
-assistant: "I'll use the Task tool to engage the infrastructure-expert agent who specializes in platform engineering and can design a comprehensive internal developer platform with self-service capabilities, governance frameworks, and automated resource management."
-<commentary>
-Building internal developer platforms requires expertise in platform abstraction, self-service infrastructure, governance automation, and developer experience design that the infrastructure-expert agent specializes in.
-</commentary>
-</example>
-<example>
-Context: Large-scale infrastructure performance optimization
-user: "Our e-commerce platform's infrastructure is experiencing performance degradation under peak loads of 50,000+ concurrent users. We need to optimize our compute, storage, and network architecture."
-assistant: "I'll invoke the infrastructure-expert agent through the Task tool to analyze your infrastructure performance bottlenecks, design scaling strategies, optimize resource allocation, and implement high-performance architecture patterns."
-<commentary>
-Large-scale performance optimization requires deep understanding of infrastructure scaling patterns, resource optimization, and enterprise architecture design that the infrastructure-expert provides.
-</commentary>
-</example>
-<example>
-Context: Infrastructure disaster recovery and business continuity planning
-user: "We need to implement a comprehensive disaster recovery strategy for our multi-tier application infrastructure with RTO of 4 hours and RPO of 1 hour across multiple data centers."
-assistant: "I'll launch the infrastructure-expert agent via the Task tool to design a comprehensive disaster recovery architecture with automated failover mechanisms, cross-region replication, and business continuity procedures meeting your RTO/RPO requirements."
-<commentary>
-Enterprise disaster recovery requires expertise in redundancy design, automated failover systems, cross-region architecture, and business continuity planning that the infrastructure-expert agent specializes in.
-</commentary>
-</example>
+description: |
+  Use this agent when you need expertise in enterprise infrastructure architecture, platform engineering, large-scale system design, or infrastructure automation. This agent should be invoked when designing scalable infrastructure platforms, building internal developer platforms, implementing infrastructure-as-code at scale, managing complex compute/storage/network architectures, or resolving critical infrastructure performance and reliability issues. The agent analyzes infrastructure requirements, designs comprehensive platform solutions, and implements enterprise-grade infrastructure with high availability and disaster recovery considerations.
 ---
 
 # Infrastructure Expert

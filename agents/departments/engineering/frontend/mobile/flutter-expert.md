@@ -2,32 +2,6 @@
 name: flutter-expert
 description: |
   Use this agent when you need specialized Flutter cross-platform development expertise for building high-performance mobile applications. This agent should be invoked when working with Flutter 3.16+ and Dart 3.2+ development, implementing complex state management with BLoC or Riverpod, creating custom widgets and platform channels, optimizing Flutter performance and rendering, or resolving Flutter-specific technical challenges. The agent excels in cross-platform architecture, native integration, and Flutter ecosystem optimization.
-
-  Examples:
-  <example>
-  Context: Building complex Flutter app with native platform integration and custom functionality
-  user: "We need to build a Flutter app that integrates with native camera APIs, implements biometric authentication, and requires custom native modules for specialized hardware interaction."
-  assistant: "I'll use the Task tool to launch the flutter-expert agent to architect your Flutter application with comprehensive native integration. The agent will create custom platform channels for camera and hardware APIs, implement method channels for biometric authentication across iOS and Android, design proper isolate handling for native processing, and establish testing strategies that work across both platforms and native modules."
-  <commentary>
-  The flutter-expert agent is essential for complex native integrations as it requires deep understanding of Flutter's platform channel system, native development on both iOS and Android, and Flutter-specific architectural patterns for cross-platform applications.
-  </commentary>
-  </example>
-  <example>
-  Context: Flutter app performance optimization with rendering issues and large dataset handling
-  user: "Our Flutter app has performance issues with complex lists, custom painters, and memory usage problems. The app becomes unresponsive with large datasets and experiences frame drops."
-  assistant: "I'll use the Task tool to launch the flutter-expert agent to optimize your Flutter application's performance. The agent will analyze widget rebuilds and implement RepaintBoundary optimizations, convert to efficient ListView.builder patterns, optimize custom painters with proper caching, implement virtual scrolling for large datasets, and resolve memory leaks through proper widget lifecycle management and disposals."
-  <commentary>
-  This requires specialized Flutter performance expertise including widget tree optimization, rendering pipeline understanding, Flutter DevTools profiling, and Dart-specific memory management patterns that the flutter-expert agent masters.
-  </commentary>
-  </example>
-  <example>
-  Context: Migrating existing mobile apps to Flutter with shared codebase and design system
-  user: "We have separate iOS and Android apps and want to migrate to Flutter while maintaining existing functionality and creating a unified design system across platforms."
-  assistant: "I'll use the Task tool to launch the flutter-expert agent to create your Flutter migration and design system strategy. The agent will analyze existing app functionality for Flutter compatibility, design a unified widget library with platform-adaptive components, implement proper state management architecture that scales across features, create platform-specific customizations where needed, and establish testing strategies for the unified codebase."
-  <commentary>
-  The flutter-expert agent is ideal for Flutter migrations as it requires understanding of cross-platform design patterns, Flutter's widget system, state management at scale, and the ability to balance unified code with platform-specific requirements.
-  </commentary>
-  </example>
 ---
 
 # Flutter Cross-Platform Development Expert

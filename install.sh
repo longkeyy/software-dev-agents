@@ -1,82 +1,143 @@
 #!/bin/bash
 
-# Claude Code Agents 安装脚本
-# 将agents安装到Claude Code的标准位置
+# Claude Code Agents - Plugin Installation Script
+# Installs agents as a Claude Code plugin
 
-set -e  # 遇到错误时退出
+set -e
 
-echo "🚀 Claude Code Agents 安装脚本"
-echo "=================================="
+echo "🚀 Claude Code Agents - Plugin Installation"
+echo "============================================"
 
-# 检查 Claude Code 是否已安装
-if [ ! -d "$HOME/.claude" ]; then
-    echo "❌ 错误: 未找到 ~/.claude 目录"
-    echo "请先安装 Claude Code: https://claude.ai/code"
+# Get the directory where this script is located
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# Check for required files
+if [ ! -f "$SCRIPT_DIR/.claude-plugin/plugin.json" ]; then
+    echo "❌ Error: plugin.json not found"
+    echo "Please ensure you're running from the claude-code-agents directory"
     exit 1
 fi
 
-echo "✅ 检测到 Claude Code 已安装"
-
-# 创建 agents 目录
-echo "📁 创建 agents 目录结构..."
-mkdir -p "$HOME/.claude/agents"
-
-# 检查源文件是否存在
-if [ ! -d "agents" ] || [ ! -f "agent-guide.md" ]; then
-    echo "❌ 错误: 源文件不完整"
-    echo "请确保在 claude-code-agents 项目根目录中运行此脚本"
+if [ ! -d "$SCRIPT_DIR/agents" ]; then
+    echo "❌ Error: agents directory not found"
     exit 1
 fi
 
-# 复制 agent 定义文件
-echo "📋 复制 agent 定义文件..."
-echo "  - 复制 agents/ → ~/.claude/agents/"
-cp -r agents/* "$HOME/.claude/agents/"
+echo "✅ Plugin structure validated"
 
-echo "  - 复制 agent-guide.md → ~/.claude/agent-guide.md"
-cp agent-guide.md "$HOME/.claude/agent-guide.md"
+# Determine installation method
+echo ""
+echo "📋 Installation Options:"
+echo ""
+echo "1) Plugin mode (Recommended)"
+echo "   - Register as a Claude Code plugin"
+echo "   - Agents loaded on-demand"
+echo "   - Better token efficiency"
+echo ""
+echo "2) Legacy mode"
+echo "   - Copy agents to ~/.claude/agents/"
+echo "   - All agents always available"
+echo "   - Higher token usage"
+echo ""
 
-# 创建或更新主配置文件
-echo "⚙️ 配置 Claude Code..."
+while true; do
+    read -p "Choose installation method [1-2]: " choice
+    case $choice in
+        1)
+            echo ""
+            echo "📦 Installing as Claude Code plugin..."
 
-# 检查 claude.md 是否存在
-if [ ! -f "$HOME/.claude/claude.md" ]; then
-    echo "  - 创建 ~/.claude/claude.md"
-    touch "$HOME/.claude/claude.md"
-fi
+            # Create plugins directory if not exists
+            mkdir -p "$HOME/.claude/plugins"
 
-# 检查是否已经存在我们的配置
-if ! grep -q "# Claude Code Agents - START" "$HOME/.claude/claude.md"; then
-    echo "  - 添加 agents 配置到 claude.md"
-    cat >> "$HOME/.claude/claude.md" << 'EOF'
+            # Create symlink to plugin
+            PLUGIN_LINK="$HOME/.claude/plugins/software-dev-agents"
+
+            if [ -L "$PLUGIN_LINK" ] || [ -d "$PLUGIN_LINK" ]; then
+                echo "  - Removing existing installation..."
+                rm -rf "$PLUGIN_LINK"
+            fi
+
+            echo "  - Creating plugin symlink..."
+            ln -s "$SCRIPT_DIR" "$PLUGIN_LINK"
+
+            echo ""
+            echo "✅ Plugin installed successfully!"
+            echo "============================================"
+            echo ""
+            echo "🎯 Usage:"
+            echo ""
+            echo "The plugin is now registered. Claude will automatically"
+            echo "select appropriate agents based on your questions."
+            echo ""
+            echo "📚 Available agent categories:"
+            echo "   • Engineering: frontend, backend, algorithm, QA, data, infra"
+            echo "   • Product: product managers, business analysts"
+            echo "   • Creative: design, content writing"
+            echo "   • Marketing: digital, growth, brand, social"
+            echo "   • Sales: enterprise, presales"
+            echo "   • Customer Service: support, success"
+            echo ""
+            echo "🔄 VP-level coordinators for cross-team tasks:"
+            echo "   • vp-technology, vp-product, vp-creative"
+            echo "   • vp-marketing, vp-sales, vp-customer"
+            echo ""
+            break
+            ;;
+        2)
+            echo ""
+            echo "📁 Installing in legacy mode..."
+
+            # Create agents directory
+            mkdir -p "$HOME/.claude/agents"
+
+            # Copy agent files
+            echo "  - Copying agent definitions..."
+            cp -r "$SCRIPT_DIR/agents/"* "$HOME/.claude/agents/"
+
+            # Copy workflow guide
+            if [ -f "$SCRIPT_DIR/agent-workflow-guide.md" ]; then
+                echo "  - Copying workflow guide..."
+                cp "$SCRIPT_DIR/agent-workflow-guide.md" "$HOME/.claude/agent-workflow-guide.md"
+            fi
+
+            # Update claude.md if needed
+            if [ -f "$HOME/.claude/claude.md" ]; then
+                if ! grep -q "# Claude Code Agents - START" "$HOME/.claude/claude.md"; then
+                    echo "  - Adding reference to claude.md..."
+                    cat >> "$HOME/.claude/claude.md" << 'EOF'
 
 # Claude Code Agents - START
-@agent-guide.md
+@agent-workflow-guide.md
 # Claude Code Agents - END
 EOF
-else
-    echo "  - 配置已存在，跳过"
-fi
+                fi
+            else
+                echo "  - Creating claude.md..."
+                cat > "$HOME/.claude/claude.md" << 'EOF'
+# Claude Code Agents - START
+@agent-workflow-guide.md
+# Claude Code Agents - END
+EOF
+            fi
 
-echo ""
-echo "✅ 安装完成！"
-echo "=================================="
-echo ""
-echo "🎯 现在您可以使用以下方式调用 agents："
-echo ""
-echo "💻 单一技术问题:"
-echo "   claude '优化这段Go代码的性能'"
-echo "   claude '帮我review这个React组件'"
-echo ""
-echo "🤝 跨团队协作:"
-echo "   claude '设计一个用户认证系统'"
-echo "   claude '制定产品营销策略'"
-echo ""
-echo "🏢 复杂项目:"
-echo "   claude '规划新产品从设计到上线'"
-echo "   claude '完整的电商平台开发方案'"
-echo ""
-echo "📚 详细使用指南: ~/.claude/agent-guide.md"
-echo "🗑️ 卸载: ./uninstall.sh"
+            echo ""
+            echo "✅ Legacy installation complete!"
+            echo "============================================"
+            echo ""
+            echo "⚠️  Note: Legacy mode loads all agents at startup,"
+            echo "   which may impact performance with large agent sets."
+            echo ""
+            echo "   Consider using plugin mode for better efficiency."
+            echo ""
+            break
+            ;;
+        *)
+            echo "❌ Invalid choice. Please enter 1 or 2."
+            ;;
+    esac
+done
+
+echo "🗑️  To uninstall: ./uninstall.sh"
 echo ""
 echo "Happy coding! 🎉"

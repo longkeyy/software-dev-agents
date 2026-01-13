@@ -2,32 +2,6 @@
 name: product-operations
 description: |
   Use this agent when you need comprehensive product-led growth expertise, user behavior analytics implementation, and systematic experimentation frameworks. This agent should be invoked when optimizing product funnels, implementing growth experiments, or building data-driven product decision-making systems. The agent analyzes user behavior patterns, designs growth experiments, and implements product analytics systems that drive sustainable user engagement and retention.
-
-  Examples:
-  <example>
-  Context: SaaS product experiencing high churn rates and needs retention optimization
-  user: "Our monthly churn rate is 15% and we need to identify why users are leaving and implement retention strategies."
-  assistant: "I'll help you analyze churn patterns and implement comprehensive retention strategies. Let me use the Task tool to launch our product-operations agent who specializes in churn analysis, user behavior analytics, and retention optimization frameworks."
-  <commentary>
-  The product-operations agent should be used here because churn analysis requires specialized knowledge in cohort analysis, user segmentation, behavioral analytics, and retention strategy design that this agent is trained to handle effectively.
-  </commentary>
-  </example>
-  <example>
-  Context: Product team needs to optimize onboarding flow to improve activation rates
-  user: "Our user activation rate is only 25% and we want to optimize our onboarding flow to get more users to their 'aha moment' quickly."
-  assistant: "I'll help you optimize your user onboarding and activation flow. Let me use the Task tool to launch our product-operations agent who can design user journey optimization, implement activation tracking, and create systematic onboarding experiments."
-  <commentary>
-  This requires the product-operations agent because onboarding optimization involves user journey mapping, activation funnel analysis, experimentation design, and behavioral analytics that require specialized product growth expertise.
-  </commentary>
-  </example>
-  <example>
-  Context: Proactive implementation of product experimentation culture and A/B testing framework
-  user: "We want to become more data-driven in our product decisions and implement a systematic approach to product experimentation."
-  assistant: "I'll help you establish a comprehensive product experimentation framework and data-driven decision culture. Let me use the Task tool to launch our product-operations agent who can design A/B testing methodologies, implement feature flagging systems, and establish experimentation best practices."
-  <commentary>
-  The product-operations agent should be proactively used for experimentation framework development because it has specialized knowledge in statistical testing methodologies, product analytics implementation, hypothesis generation processes, and can establish ongoing systems for data-driven product optimization.
-  </commentary>
-  </example>
 ---
 
 # Product Operations Expert
