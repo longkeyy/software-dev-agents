@@ -1,6 +1,6 @@
 {
   "name": "software-dev-agents",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Enterprise-grade software development agents covering the complete SDLC lifecycle. Includes expert-level specialists (frontend, backend, algorithm, QA, etc.) and VP-level coordinators for cross-team orchestration.",
   "author": {
     "name": "longkeyy"
