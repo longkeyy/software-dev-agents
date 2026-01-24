@@ -103,12 +103,89 @@ allowed-tools: Task, Read, Glob
 
 ---
 
+## 📝 文档与评审规范 (IEEE/GB 标准)
+
+### 标准对应关系
+
+| 阶段 | IEEE/ISO 标准 | GB/T 8567 文档 |
+|------|---------------|----------------|
+| 需求 | IEEE 29148 | SRS, SSS, IRS, DRD |
+| 设计 | IEEE 1016 | SDD, SSDD, IDD, DBDD |
+| 测试 | IEEE 829 | STP, STD, STR |
+| 用户文档 | IEEE 1063 | SUM, COM, CPM |
+| 项目管理 | IEEE 1058/828/730 | SDP, SCMP, SQAP |
+
+### 文档编写专家
+
+| 专家 | 负责文档 |
+|------|----------|
+| `requirements-analyst` | SRS, SSS, IRS, DRD |
+| `system-designer` | SDD, SSDD, IDD, DBDD |
+| `test-documentation-writer` | STP, STD, STR |
+| `user-documentation-writer` | SUM, COM, CPM |
+| `management-documentation-writer` | FAR, SDP, SCMP, SQAP, DPMR, PDSR |
+
+### 评审类型与专家 (IEEE 1028)
+
+| 评审类型 | 正式程度 | 适用场景 | 评审专家 |
+|----------|----------|----------|----------|
+| **Inspection** | 最高 | SRS、关键代码 | `inspection-reviewer` |
+| **Technical Review** | 高 | 设计文档 | `technical-reviewer` |
+| **Management Review** | 中 | 计划、报告 | `management-reviewer` |
+| **Walk-through** | 低 | 测试用例、用户手册 | `walkthrough-facilitator` |
+| **Audit** | 独立 | 验收、合规 | `audit-reviewer` |
+
+### 文档流程规范
+
+```
+阶段        文档                  编写者                    评审类型           评审者
+═══════════════════════════════════════════════════════════════════════════════════════
+
+可行性      FAR                   management-doc-writer     Management Review  management-reviewer
+            ↓ 评审通过
+
+规划        SDP                   management-doc-writer     Management Review  management-reviewer
+            ↓ 评审通过
+
+需求        SRS                   requirements-analyst      Inspection         inspection-reviewer
+            ↓ 评审通过 → 基线化
+
+设计        SDD 概要设计          system-designer           Technical Review   technical-reviewer
+            ↓ 评审通过
+            SDD 详细设计          system-designer           Technical Review   technical-reviewer
+            DBDD                  system-designer           Technical Review   technical-reviewer
+            ↓ 评审通过 → 基线化
+
+编码        源代码                开发专家                  Inspection         code-reviewer
+            ↓ 代码评审通过
+
+测试        STP                   test-doc-writer           Technical Review   technical-reviewer
+            STD                   test-doc-writer           Walk-through       walkthrough-facilitator
+            STR                   test-doc-writer           Management Review  management-reviewer
+            ↓ 测试评审通过
+
+验收        验收测试              甲方/用户                 Audit              audit-reviewer
+            ↓ 验收通过
+
+交付        SUM                   user-doc-writer           Walk-through       walkthrough-facilitator
+            COM                   user-doc-writer           Walk-through       walkthrough-facilitator
+```
+
+### 核心评审原则
+
+1. **编写与评审分离**: 同一文档的编写者和评审者必须是不同 agent
+2. **评审前置**: 每个阶段产出必须经过评审才能进入下一阶段
+3. **基线管理**: 评审通过的文档需要基线化，后续修改需要走变更流程
+
+---
+
 ## ⚠️ 重要原则
 
 1. **禁止跳过专家**: 每个环节都必须有对应专家参与，不得因为"简单"而跳过
 2. **文档先行**: 所有实现前必须有专家参与的设计文档
 3. **质量门禁**: 每个阶段都有专家验收标准，未通过不得进入下一阶段
 4. **知识传承**: 专家参与的目的是确保最佳实践和避免重复错误
+5. **编写评审分离**: 文档编写者不能评审自己的文档
 
 ---
 
