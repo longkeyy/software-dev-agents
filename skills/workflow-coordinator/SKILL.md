@@ -119,6 +119,75 @@ inspection-reviewer    →  Inspection 评审
 
 ---
 
+## 📁 项目文档目录结构
+
+```
+docs/
+├── requirements/
+│   ├── product-requirements.md         # 产品需求（用户视角，product-manager 编写）
+│   ├── SRS.md                          # 软件需求规格说明（汇总双视角）
+│   ├── IRS.md                          # 接口需求规格说明
+│   └── DRD.md                          # 数据需求说明
+├── design/
+│   ├── SDD.md                          # 软件设计说明（Context/Composition/Dependency 视点）
+│   ├── sdd/                            # 模块详细设计（Logical/Algorithm/Interaction 视点）
+│   │   ├── 01-user-module.md
+│   │   ├── 02-order-module.md
+│   │   └── ...
+│   ├── IDD.md                          # 接口设计说明（系统间/模块间接口契约）
+│   ├── api/                            # API 接口文档
+│   │   ├── overview.md                 # API 总览（认证、错误码、版本策略）
+│   │   ├── 01-user-api.md
+│   │   ├── 02-order-api.md
+│   │   └── ...
+│   └── DBDD.md                         # 数据库设计说明
+├── test/
+│   ├── STP.md                          # 软件测试计划
+│   ├── STD.md                          # 软件测试说明
+│   └── STR.md                          # 软件测试报告
+├── management/
+│   ├── FAR.md                          # 可行性分析报告
+│   ├── SDP.md                          # 软件开发计划
+│   ├── SCMP.md                         # 配置管理计划
+│   └── SQAP.md                         # 质量保证计划
+├── user/
+│   ├── SUM.md                          # 软件用户手册
+│   └── COM.md                          # 计算机操作手册
+└── review/                             # 评审记录归档
+    ├── SRS-review.md
+    ├── SDD-review.md
+    └── ...
+```
+
+### 设计文档结构说明 (IEEE 1016)
+
+**SDD.md（架构级）** — 包含全局视点：
+
+| 视点 | 内容 |
+|------|------|
+| Context | 系统边界、外部实体、部署环境 |
+| Composition | 系统分解为模块/子系统 |
+| Dependency | 模块间依赖关系 |
+
+**sdd/xx-module.md（模块级）** — 每个模块的详细设计：
+
+| 视点 | 内容 |
+|------|------|
+| Logical | 类图、数据结构、职责划分 |
+| Algorithm | 核心算法、处理逻辑 |
+| Interaction | 时序图、模块间交互 |
+| State dynamics | 状态机（如有） |
+
+**IDD.md + api/ 目录** — 接口文档双层结构：
+
+| 文档 | 定位 |
+|------|------|
+| IDD.md | 系统间、模块间接口契约（协议、消息格式、集成方式） |
+| api/overview.md | API 总览（认证方式、错误码规范、版本策略） |
+| api/xx-api.md | 按模块拆分的具体 API 端点文档 |
+
+---
+
 ## 📝 文档与评审规范 (IEEE/GB 标准)
 
 ### 标准对应关系
@@ -168,9 +237,9 @@ inspection-reviewer    →  Inspection 评审
             SRS(汇总双视角)       requirements-analyst      Inspection         inspection-reviewer
             ↓ 评审通过 → 基线化
 
-设计        SDD 概要设计          system-designer           Technical Review   technical-reviewer
-            ↓ 评审通过
-            SDD 详细设计          system-designer           Technical Review   technical-reviewer
+设计        SDD.md(架构级)        system-designer           Technical Review   technical-reviewer
+            sdd/xx-module.md      system-designer           Technical Review   technical-reviewer
+            IDD.md + api/         system-designer           Technical Review   technical-reviewer
             DBDD                  system-designer           Technical Review   technical-reviewer
             ↓ 评审通过 → 基线化
 
