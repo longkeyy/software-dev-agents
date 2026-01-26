@@ -54,9 +54,25 @@ allowed-tools: Task, Read, Glob
 
 ### 📋 第1阶段：需求分析与设计
 
+**双视角需求协作流程：**
+
+产品经理从用户/商业角度、需求分析师从功能/技术角度分别编写，最后由需求分析师汇总，确保两个视角都不遗漏。
+
+```
+product-manager        →  产品需求（用户视角：用户故事、业务流程、商业目标）
+                            ↘
+requirements-analyst   →  功能需求（技术视角：功能规格、非功能需求、接口约束）
+                            ↓
+requirements-analyst   →  汇总为 SRS（合并双视角，查漏补缺）
+                            ↓
+inspection-reviewer    →  Inspection 评审
+```
+
 | 领域 | 可用专家 |
 |------|----------|
-| 需求分析 | `business-analyst` / `product-manager` / `product-owner` |
+| 产品需求（用户视角） | `product-manager` / `product-owner` |
+| 功能需求（技术视角） | `requirements-analyst` / `business-analyst` |
+| 需求汇总与 SRS 编写 | `requirements-analyst` |
 | 产品策略 | `product-strategy-manager` / `vp-product` |
 | 系统架构 | `system-architect` / `system-architecture-consultant` / `ai-systems-architect` |
 | 数据架构 | `data-architect` / `data-pipeline-architect` |
@@ -147,7 +163,9 @@ allowed-tools: Task, Read, Glob
 规划        SDP                   management-doc-writer     Management Review  management-reviewer
             ↓ 评审通过
 
-需求        SRS                   requirements-analyst      Inspection         inspection-reviewer
+需求        产品需求(用户视角)    product-manager           —                  —
+            功能需求(技术视角)    requirements-analyst      —                  —
+            SRS(汇总双视角)       requirements-analyst      Inspection         inspection-reviewer
             ↓ 评审通过 → 基线化
 
 设计        SDD 概要设计          system-designer           Technical Review   technical-reviewer
